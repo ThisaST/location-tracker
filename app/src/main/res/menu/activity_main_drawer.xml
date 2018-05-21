@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_bus_route"
+            android:icon="@drawable/bus_route"
+            android:title="Bus Route" />
+        <item
+            android:id="@+id/nav_bus"
+            android:icon="@drawable/bus_icon_for_drawer"
+            android:title="Bus" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/history_icon"
+            android:title="History" />
+        <item
+            android:id="@+id/nav_summary"
+            android:icon="@drawable/summary_icon"
+            android:title="Summary" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_signout"
+                android:icon="@drawable/signout_icon"
+                android:title="SignOut" />
+        </menu>
+    </item>
+
+</menu>

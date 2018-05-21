@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00b9a8</color>
+    <color name="colorPrimaryDark">#00685e</color>
+    <color name="colorAccent">#40fcff</color>
+    <color name="gradient">#6922dc</color>
+    <color name="gradientLight">#8e4bfa</color>
+    <color name="gradientDark">#4d2889</color>
+</resources>

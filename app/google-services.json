@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "103202259552",
+    "firebase_url": "https://trackerapplication-1790f.firebaseio.com",
+    "project_id": "trackerapplication-1790f",
+    "storage_bucket": "trackerapplication-1790f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103202259552:android:f71aeb36e4142e20",
+        "android_client_info": {
+          "package_name": "com.uok.se.thisara.smart.trackerapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103202259552-j88ccrqgam06cg162s0bloarff3aiugo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uok.se.thisara.smart.trackerapplication",
+            "certificate_hash": "2db5e0e653e18d9d5cb69952232afdfe0248909d"
+          }
+        },
+        {
+          "client_id": "103202259552-2j1jt5r1kfqs6u1aufmtu5dtgefi6ecr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAxfMef1qcxAd27bAUysHfHsOzrsEkbTg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103202259552-2j1jt5r1kfqs6u1aufmtu5dtgefi6ecr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
