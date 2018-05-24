@@ -136,6 +136,7 @@ public class TrackerService extends Service {
                         if (busLocation == null) {
 
                         }
+
                         mLocationClient.sendCurrentBusLocation(busLocation)
                                 .enqueue(new Callback<BusLocation>() {
                                     @Override

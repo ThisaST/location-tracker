@@ -56,6 +56,9 @@ dependencies {
 
     //material edit text
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+
+    //material animated switch
+    implementation 'com.github.glomadrian:MaterialAnimatedSwitch:1.1@aar'
 }
 
 

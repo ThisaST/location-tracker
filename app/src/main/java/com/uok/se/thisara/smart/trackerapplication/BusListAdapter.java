@@ -19,7 +19,7 @@ import java.util.List;
 public class BusListAdapter extends RecyclerView.Adapter<BusListAdapter.BusViewHolder> {
 
 
-    public static class BusViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public static class BusViewHolder extends RecyclerView.ViewHolder {
 
 
         CardView cardView;
@@ -39,12 +39,6 @@ public class BusListAdapter extends RecyclerView.Adapter<BusListAdapter.BusViewH
 
         }
 
-        @Override
-        public void onClick(View view) {
-
-            Bus selectedBus = getSelectedBus();
-
-        }
     }
 
     public static Bus getSelectedBus() {
@@ -83,6 +77,7 @@ public class BusListAdapter extends RecyclerView.Adapter<BusListAdapter.BusViewH
         selectedBus.setBusModel(busList.get(position).getBusModel());
         selectedBus.setOwnerName(busList.get(position).getOwnerName());
         selectedBus.setImageId(busList.get(position).getImageId());
+
     }
 
     @Override
