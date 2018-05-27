@@ -1,5 +1,6 @@
 package com.uok.se.thisara.smart.trackerapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,6 +21,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
+import com.uok.se.thisara.smart.trackerapplication.model.Bus;
 
 import jp.wasabeef.picasso.transformations.CropCircleTransformation;
 
@@ -108,8 +110,12 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_bus_route) {
+
             // Handle the camera action
         } else if (id == R.id.nav_bus) {
+
+            Intent intent = new Intent(this, BusIdentificationActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_history) {
 

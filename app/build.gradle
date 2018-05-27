@@ -59,6 +59,12 @@ dependencies {
 
     //material animated switch
     implementation 'com.github.glomadrian:MaterialAnimatedSwitch:1.1@aar'
+
+    //animated button
+    implementation 'com.github.rasoulmiri:buttonloading:v1.0.8'
+
+    //edit text third party
+    implementation 'com.github.florent37:materialtextfield:1.0.7'
 }
 
 

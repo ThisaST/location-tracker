@@ -41,10 +41,10 @@ public class BusListAdapter extends RecyclerView.Adapter<BusListAdapter.BusViewH
 
     }
 
-    public static Bus getSelectedBus() {
+    /*public static Bus getSelectedBus() {
 
         return new BusListAdapter().selectedBus;
-    }
+    }*/
 
     private List<Bus> busList;
     private Bus selectedBus;
@@ -73,10 +73,10 @@ public class BusListAdapter extends RecyclerView.Adapter<BusListAdapter.BusViewH
         holder.ownerName.setText(busList.get(position).getOwnerName());
         holder.busImage.setImageResource(busList.get(position).getImageId());
 
-        selectedBus.setRegistrationNo(busList.get(position).getRegistrationNo());
+        /*selectedBus.setRegistrationNo(busList.get(position).getRegistrationNo());
         selectedBus.setBusModel(busList.get(position).getBusModel());
         selectedBus.setOwnerName(busList.get(position).getOwnerName());
-        selectedBus.setImageId(busList.get(position).getImageId());
+        selectedBus.setImageId(busList.get(position).getImageId());*/
 
     }
 

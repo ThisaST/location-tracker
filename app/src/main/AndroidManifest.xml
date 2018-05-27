@@ -57,10 +57,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".BusIdentificationActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AddNewBusActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -73,6 +73,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity android:name=".BusRouteActivity" />
+        <activity android:name=".BusHistoryActivity"></activity>
     </application>
 
 </manifest>

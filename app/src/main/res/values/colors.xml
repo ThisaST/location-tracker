@@ -6,7 +6,7 @@
     <color name="gradient">#6922dc</color>
     <color name="gradientLight">#8e4bfa</color>
     <color name="gradientDark">#4d2889</color>
-
+    <color name="buttonColor">#00AFEF</color>
 
     <color name="ripple_effect_color">#f816a463</color>
 

@@ -16,12 +16,12 @@
 
             <ImageView
                 android:id="@+id/busImage"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@mipmap/ic_launcher"/>
 
             <LinearLayout
-                android:layout_width="199dp"
+                android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="10dp"
@@ -42,11 +42,6 @@
                     android:layout_height="wrap_content"
                     android:text="Toyota" />
 
-                <TextView
-                    android:id="@+id/routeNo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="420" />
 
                 <TextView
                     android:id="@+id/ownerName"
@@ -60,7 +55,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <ImageButton
                     android:layout_width="wrap_content"
