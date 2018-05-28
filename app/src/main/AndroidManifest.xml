@@ -74,7 +74,7 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".BusRouteActivity" />
-        <activity android:name=".BusHistoryActivity"></activity>
+        <activity android:name=".BusHistoryActivity" />
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.uok.se.thisara.smart.trackerapplication;
 
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -111,6 +112,9 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_bus_route) {
 
+            Intent intent = new Intent(this, BusRouteActivity.class);
+            startActivity(intent);
+
             // Handle the camera action
         } else if (id == R.id.nav_bus) {
 
@@ -118,6 +122,9 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_history) {
+
+            Intent intent = new Intent(this, BusHistoryActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_summary) {
 
@@ -127,6 +134,8 @@ public class MainActivity extends AppCompatActivity
 
             FirebaseAuth.getInstance().signOut();
             Toast.makeText(MainActivity.this, "signed out", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, SignInActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
