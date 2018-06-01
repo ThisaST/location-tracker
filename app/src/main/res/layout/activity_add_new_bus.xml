@@ -10,16 +10,20 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimaryDark"
+        android:layout_height="53dp"
+        android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:tooltipText="Add New Bus"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/smart_travel_logo"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Bus"
+            android:textColor="@color/basePressColor"
+            android:textSize="20sp" />
+
     </android.support.v7.widget.Toolbar>
 
     <Spinner
@@ -51,7 +55,7 @@
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303"
+        app:layout_constraintVertical_bias="0.284"
         app:mtf_image="@drawable/bus_icon_blue"
         app:mtf_labelColor="#666666">
 
@@ -73,10 +77,10 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/my_toolbar"
-        app:layout_constraintVertical_bias="0.473"
+        app:layout_constraintVertical_bias="0.439"
         app:mtf_image="@drawable/smart_travel_logo"
         app:mtf_labelColor="#666">
 
@@ -125,5 +129,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/my_toolbar"
         app:layout_constraintVertical_bias="0.984" />
+
+
+    <FrameLayout
+        android:layout_width="342dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/my_toolbar"
+        app:layout_constraintVertical_bias="0.777">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="334dp"
+            android:layout_height="153dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.558"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/my_toolbar"
+            app:layout_constraintVertical_bias="0.748"
+            app:srcCompat="@drawable/bus_icon_for_drawer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Bus Image"
+            android:layout_marginLeft="50dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"/>
+    </FrameLayout>
+
 
 </android.support.constraint.ConstraintLayout>

@@ -8,7 +8,7 @@
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/signInButton"
-        android:layout_width="114dp"
+        android:layout_width="138dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -24,8 +24,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="267dp"
-        android:layout_height="260dp"
+        android:layout_width="312dp"
+        android:layout_height="360dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"

@@ -6,9 +6,9 @@
     android:padding="10dp">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/busCardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/busCardView">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,7 +18,7 @@
                 android:id="@+id/busImage"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@mipmap/ic_launcher"/>
+                android:src="@mipmap/ic_launcher" />
 
             <LinearLayout
                 android:layout_width="180dp"
@@ -58,21 +58,20 @@
                 android:orientation="horizontal">
 
                 <ImageButton
+                    android:id="@+id/eidtButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:background="@null"
-                    android:src="@drawable/edit_bus_details_icon"
-                    android:id="@+id/eidtButton"/>
+                    android:src="@drawable/edit_bus_details_icon" />
 
                 <ImageButton
+                    android:id="@+id/removeButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:src="@drawable/delete_icon"
                     android:layout_margin="5dp"
-                    android:id="@+id/removeButton"/>
-
+                    android:background="@null"
+                    android:src="@drawable/delete_icon" />
 
 
             </LinearLayout>
