@@ -40,6 +40,8 @@ dependencies {
     implementation "com.google.android.gms:play-services-location:${googleplayservicesVersion}"
 //    implementation 'com.google.android.gms:play-services-auth:11.2.0'
 
+    implementation "com.google.android.gms:play-services:$googleplayservicesVersion"
+
     implementation "com.google.android.gms:play-services-auth:${googleplayservicesVersion}"
 
     // Retrofit & OkHttp
@@ -65,6 +67,11 @@ dependencies {
 
     //edit text third party
     implementation 'com.github.florent37:materialtextfield:1.0.7'
+
+    implementation "android.arch.lifecycle:runtime:1.1.1"
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+
 }
 
 

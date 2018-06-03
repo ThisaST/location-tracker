@@ -10,11 +10,11 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="79dp"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
-        android:tooltipText="Add New Bus"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:tooltipText="Add New Bus"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
         <TextView
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:text="Add New Bus"
             android:textColor="@color/basePressColor"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
     </android.support.v7.widget.Toolbar>
 
@@ -36,15 +36,15 @@
         android:layout_marginBottom="448dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintHorizontal_bias="0.617"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76"
+        app:layout_constraintVertical_bias="0.333"
         tools:listitem="TATA" />
 
     <com.github.florent37.materialtextfield.MaterialTextField
         android:id="@+id/materialTextField"
-        android:layout_width="335dp"
+        android:layout_width="470dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -69,7 +69,7 @@
     </com.github.florent37.materialtextfield.MaterialTextField>
 
     <com.github.florent37.materialtextfield.MaterialTextField
-        android:layout_width="334dp"
+        android:layout_width="473dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -105,16 +105,16 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.829" />
+        app:layout_constraintVertical_bias="0.323" />
 
 
     <Button
         android:id="@+id/addNewBusButton"
-        android:layout_width="332dp"
-        android:layout_height="wrap_content"
+        android:layout_width="419dp"
+        android:layout_height="69dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -132,8 +132,8 @@
 
 
     <FrameLayout
-        android:layout_width="342dp"
-        android:layout_height="164dp"
+        android:layout_width="463dp"
+        android:layout_height="208dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
@@ -145,8 +145,8 @@
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="334dp"
-            android:layout_height="153dp"
+            android:layout_width="450dp"
+            android:layout_height="190dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -159,13 +159,6 @@
             app:layout_constraintVertical_bias="0.748"
             app:srcCompat="@drawable/bus_icon_for_drawer" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add Bus Image"
-            android:layout_marginLeft="50dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="16sp"/>
     </FrameLayout>
 
 

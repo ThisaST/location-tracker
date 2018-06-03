@@ -36,10 +36,10 @@
         android:layout_marginBottom="448dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintHorizontal_bias="0.859"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76"
+        app:layout_constraintVertical_bias="0.656"
         tools:listitem="TATA" />
 
     <com.github.florent37.materialtextfield.MaterialTextField
@@ -52,10 +52,10 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.284"
+        app:layout_constraintVertical_bias="0.218"
         app:mtf_image="@drawable/bus_icon_blue"
         app:mtf_labelColor="#666666">
 
@@ -77,10 +77,10 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/my_toolbar"
-        app:layout_constraintVertical_bias="0.439"
+        app:layout_constraintVertical_bias="0.381"
         app:mtf_image="@drawable/smart_travel_logo"
         app:mtf_labelColor="#666">
 
@@ -105,10 +105,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.109"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.829" />
+        app:layout_constraintVertical_bias="0.708" />
 
 
     <Button
@@ -159,13 +159,6 @@
             app:layout_constraintVertical_bias="0.748"
             app:srcCompat="@drawable/bus_icon_for_drawer" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add Bus Image"
-            android:layout_marginLeft="50dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="16sp"/>
     </FrameLayout>
 
 

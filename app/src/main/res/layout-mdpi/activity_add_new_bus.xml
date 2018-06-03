@@ -28,24 +28,21 @@
 
     <Spinner
         android:id="@+id/busModel"
-        android:layout_width="203dp"
+        android:layout_width="166dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="448dp"
+        android:layout_marginBottom="352dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.83"
+        app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76"
         tools:listitem="TATA" />
 
     <com.github.florent37.materialtextfield.MaterialTextField
         android:id="@+id/materialTextField"
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
+        android:layout_width="297dp"
+        android:layout_height="76dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -69,8 +66,8 @@
     </com.github.florent37.materialtextfield.MaterialTextField>
 
     <com.github.florent37.materialtextfield.MaterialTextField
-        android:layout_width="334dp"
-        android:layout_height="wrap_content"
+        android:layout_width="301dp"
+        android:layout_height="73dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -96,25 +93,18 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="452dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="12dp"
         android:text="Bus Model"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.829" />
+        tools:layout_editor_absoluteY="76dp" />
 
 
     <Button
         android:id="@+id/addNewBusButton"
-        android:layout_width="332dp"
-        android:layout_height="wrap_content"
+        android:layout_width="283dp"
+        android:layout_height="41dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -132,8 +122,8 @@
 
 
     <FrameLayout
-        android:layout_width="342dp"
-        android:layout_height="164dp"
+        android:layout_width="266dp"
+        android:layout_height="126dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
@@ -145,8 +135,8 @@
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="334dp"
-            android:layout_height="153dp"
+            android:layout_width="251dp"
+            android:layout_height="110dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -159,13 +149,13 @@
             app:layout_constraintVertical_bias="0.748"
             app:srcCompat="@drawable/bus_icon_for_drawer" />
 
-        <TextView
+        <!--<TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add Bus Image"
             android:layout_marginLeft="50dp"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="16sp"/>
+            android:textSize="16sp"/>-->
     </FrameLayout>
 
 

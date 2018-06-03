@@ -75,6 +75,14 @@
 
         <activity android:name=".BusRouteActivity" />
         <activity android:name=".BusHistoryActivity" />
+        <activity
+            android:name=".RiderActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".SelectUserTypeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

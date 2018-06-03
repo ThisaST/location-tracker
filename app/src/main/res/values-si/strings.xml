@@ -1,6 +1,7 @@
 <resources>
 
     <string name="app_name">බස් ධාවනය</string>
+    <string name="bus_route">බස් මාර්ගය</string>
     <!--<string name="notification_text">Tracking, tap to cancel</string>
     <string name="transport_id" translatable="false">123</string>
     <string name="firebase_path" translatable="false">locations</string>

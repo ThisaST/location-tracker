@@ -159,13 +159,13 @@
             app:layout_constraintVertical_bias="0.748"
             app:srcCompat="@drawable/bus_icon_for_drawer" />
 
-        <TextView
+        <!--<TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add Bus Image"
             android:layout_marginLeft="50dp"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="16sp"/>
+            android:textSize="16sp"/>-->
     </FrameLayout>
 
 
