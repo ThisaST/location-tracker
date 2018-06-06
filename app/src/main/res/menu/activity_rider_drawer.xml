@@ -11,7 +11,7 @@
         <item
             android:id="@+id/nav_bus"
             android:icon="@drawable/bus_icon_for_drawer"
-            android:title="Bus" />
+            android:title="Bus Schedule" />
         <item
             android:id="@+id/nav_history"
             android:icon="@drawable/history_icon"

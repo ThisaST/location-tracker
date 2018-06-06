@@ -39,6 +39,8 @@ public class TrackerService extends Service {
 
     private static final String TAG = TrackerService.class.getSimpleName();
     private LocationClient mLocationClient;
+    private FirebaseUser firebaseAuthBusDriver;
+
     //private BusLocation busLocation = null;
 
     @Override
@@ -47,6 +49,10 @@ public class TrackerService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        //get the firebase user as login
+        firebaseAuthBusDriver = FirebaseAuth.getInstance().getCurrentUser();
+
         buildNotification();
         //loginToFirebase();
         requestLocationUpdates();
