@@ -1,4 +1,4 @@
-package com.uok.se.thisara.smart.trackerapplication;
+package com.uok.se.thisara.smart.trackerapplication.ui.driverui;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.uok.se.thisara.smart.trackerapplication.R;
 import com.uok.se.thisara.smart.trackerapplication.model.Bus;
 
 import java.util.List;

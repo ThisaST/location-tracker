@@ -1,10 +1,7 @@
-package com.uok.se.thisara.smart.trackerapplication;
+package com.uok.se.thisara.smart.trackerapplication.ui.driverui;
 
-import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -22,7 +19,8 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
-import com.uok.se.thisara.smart.trackerapplication.model.Bus;
+import com.uok.se.thisara.smart.trackerapplication.R;
+import com.uok.se.thisara.smart.trackerapplication.ui.SignInActivity;
 
 import jp.wasabeef.picasso.transformations.CropCircleTransformation;
 

@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SignInActivity"
+            android:name=".ui.SignInActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TrackerActivity">
+        <activity android:name=".ui.TrackerActivity">
 
             <!--
             <intent-filter>
@@ -34,7 +34,7 @@
         </activity>
 
         <service
-            android:name=".TrackerService"
+            android:name=".ui.TrackerService"
             android:enabled="true"
             android:exported="true" />
 
@@ -52,14 +52,14 @@
         -->
 
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.driverui.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".BusIdentificationActivity"
+            android:name=".ui.driverui.BusIdentificationActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".AddNewBusActivity"
+            android:name=".ui.driverui.AddNewBusActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -73,15 +73,15 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".BusRouteActivity" />
-        <activity android:name=".BusHistoryActivity" />
+        <activity android:name=".ui.driverui.BusRouteActivity" />
+        <activity android:name=".ui.driverui.BusHistoryActivity" />
         <activity
-            android:name=".RiderActivity"
+            android:name=".ui.riderui.RiderActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".SelectUserTypeActivity"
+            android:name=".ui.SelectUserTypeActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".LocationSelectorActivity"
+        <activity android:name=".ui.LocationSelectorActivity"
             android:theme="@style/AppTheme.NoActionBar">
 
         </activity>

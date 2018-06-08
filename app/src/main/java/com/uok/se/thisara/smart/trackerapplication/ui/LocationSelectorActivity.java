@@ -1,7 +1,9 @@
-package com.uok.se.thisara.smart.trackerapplication;
+package com.uok.se.thisara.smart.trackerapplication.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.uok.se.thisara.smart.trackerapplication.R;
 
 public class LocationSelectorActivity extends AppCompatActivity {
 

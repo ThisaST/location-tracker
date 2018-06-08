@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.uok.se.thisara.smart.trackerapplication.RiderActivity">
+    tools:context="com.uok.se.thisara.smart.trackerapplication.ui.riderui.RiderActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.uok.se.thisara.smart.trackerapplication;
+package com.uok.se.thisara.smart.trackerapplication.ui;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.uok.se.thisara.smart.trackerapplication.R;
 
 
 /**

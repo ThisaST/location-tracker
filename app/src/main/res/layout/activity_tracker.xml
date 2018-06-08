@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.uok.se.thisara.smart.trackerapplication.TrackerActivity">
+    tools:context="com.uok.se.thisara.smart.trackerapplication.ui.TrackerActivity">
 
     <TextView
         android:layout_width="wrap_content"
