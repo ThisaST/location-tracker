@@ -4,6 +4,9 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+        <item android:id="@+id/userProfile"
+            android:title="Profile"
+            android:icon="@drawable/user_icon"/>
         <item
             android:id="@+id/nav_bus_route"
             android:icon="@drawable/bus_route"

@@ -39,7 +39,7 @@ public class BusIdentificationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(BusIdentificationActivity.this, RiderActivity.class);
+                Intent intent = new Intent(BusIdentificationActivity.this, AddNewBusActivity.class);
                 startActivity(intent);
 
             }

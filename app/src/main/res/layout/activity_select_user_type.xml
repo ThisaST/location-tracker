@@ -52,10 +52,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="357dp"
+        android:layout_width="387dp"
+        android:layout_height="370dp"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/mobile_location_maps"
+        app:srcCompat="@drawable/select_user_type_background"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
