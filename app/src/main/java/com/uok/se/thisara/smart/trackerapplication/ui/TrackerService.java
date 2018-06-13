@@ -40,6 +40,7 @@ public class TrackerService extends Service {
 
     private static final String TAG = TrackerService.class.getSimpleName();
     private LocationClient mLocationClient;
+
     private FirebaseUser firebaseAuthBusDriver;
 
     //private BusLocation busLocation = null;
@@ -91,7 +92,7 @@ public class TrackerService extends Service {
 
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
+                currentUser.getEmail(), password).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
             @Override
             public void onComplete(Task<AuthResult> task) {
                 if (task.isSuccessful()) {

@@ -18,4 +18,7 @@
     <string name="bus_route">Bus Route</string>
 
     <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="driver_login">Driver Login</string>
+    <string name="rider_login">Rider Login</string>
 </resources>

@@ -16,4 +16,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="driver_login">ධාවකයන්ගේ පිවිසුම</string>
+    <string name="rider_login">මගී පිවිසුම</string>
 </resources>
