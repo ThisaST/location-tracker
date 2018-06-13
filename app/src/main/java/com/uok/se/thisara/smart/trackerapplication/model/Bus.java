@@ -8,6 +8,9 @@ public class Bus {
     private String busModel;
 
 
+    public Bus() {
+    }
+
     public Bus(String registrationNo, String ownerName, Integer imageId, String busModel) {
         this.registrationNo = registrationNo;
         this.ownerName = ownerName;

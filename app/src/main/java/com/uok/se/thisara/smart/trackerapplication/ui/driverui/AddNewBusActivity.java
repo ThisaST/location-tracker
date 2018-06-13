@@ -10,6 +10,7 @@ import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -17,9 +18,12 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.uok.se.thisara.smart.trackerapplication.R;
+import com.uok.se.thisara.smart.trackerapplication.model.Bus;
 import com.uok.se.thisara.smart.trackerapplication.util.RunTimePermission;
 
 import java.io.ByteArrayOutputStream;
@@ -52,10 +56,11 @@ public class AddNewBusActivity extends AppCompatActivity {
         vehicleNumber = findViewById(R.id.vehicleRegisterNo);
         ownerName = findViewById(R.id.ownerName);
         vehicleImage = findViewById(R.id.vehicleImageButton);
+        vehicleModel = findViewById(R.id.busModelSpinner);
 
-
+        Log.d("test", vehicleNumber.getText().toString());
         //add values to the spinner
-        addDataToSpinner();
+        addDataToSpinner(vehicleModel);
 
         //image button implementation to get the image from the Gallery or from the camera
         vehicleImage.setOnClickListener(new View.OnClickListener() {
@@ -67,28 +72,48 @@ public class AddNewBusActivity extends AppCompatActivity {
 
         //add data to Firebase database
 
-        mDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference dbReference = mDatabase.getReference();
-
-
 
 
 
         //store the image inside the device storage
 
+        addNewBusButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                storeDataInFirebase();
+                goToBusIdentificationActivity();
+            }
+        });
 
 
     }
 
-    private void addDataToSpinner() {
+    private void goToBusIdentificationActivity() {
+
+        Intent intent = new Intent(this, BusIdentificationActivity.class);
+        startActivity(intent);
+    }
+
+    private void storeDataInFirebase() {
+
+        mDatabase = FirebaseDatabase.getInstance();
+        String dbPath = "bus/" + FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
+        DatabaseReference dbReference = mDatabase.getReference(dbPath);
+
+
+        Bus newBus = new Bus(vehicleNumber.getText().toString(), ownerName.getText().toString(), 1, vehicleModel.getSelectedItem().toString());
+        dbReference.setValue(newBus);
+    }
+
+    private void addDataToSpinner(Spinner s) {
 
         String[] arraySpinner = new String[] {
                 "TATA", "LEYLAND", "EICHER", "MICRO", "ISUZU", "MITSUBISHI"
         };
-        Spinner s = (Spinner) findViewById(R.id.busModelSpinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, arraySpinner);
-        adapter.setDropDownViewResource(android.R.layout.simple_spin‌​ner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
         s.setAdapter(adapter);
     }
 

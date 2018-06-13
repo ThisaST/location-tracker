@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.database.FirebaseDatabase;
 import com.uok.se.thisara.smart.trackerapplication.R;
 import com.uok.se.thisara.smart.trackerapplication.model.Bus;
 import com.uok.se.thisara.smart.trackerapplication.ui.riderui.RiderActivity;
@@ -69,6 +70,10 @@ public class BusIdentificationActivity extends AppCompatActivity {
     }
 
     private void initializeData() {
+
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+
+
 
         busList = new ArrayList<>();
         busList.add(new Bus("ABC4001", "Thisara Pramuditha", R.drawable.bus_icon_blue, "Laylend"));

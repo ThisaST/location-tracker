@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
-    FirebaseUser currentUser;
+    private FirebaseUser currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +67,8 @@ public class MainActivity extends AppCompatActivity
 
         userNameText.setText(currentUser.getDisplayName());
         emailAddressText.setText(currentUser.getEmail());
+
+
 
     }
 
