@@ -12,15 +12,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.glomadrian.materialanimatedswitch.MaterialAnimatedSwitch;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 import com.uok.se.thisara.smart.trackerapplication.R;
 import com.uok.se.thisara.smart.trackerapplication.ui.SignInActivity;
+import com.uok.se.thisara.smart.trackerapplication.ui.TrackerActivity;
+import com.uok.se.thisara.smart.trackerapplication.ui.UserProfileActivity;
+import com.uok.se.thisara.smart.trackerapplication.util.Configuration;
+import com.uok.se.thisara.smart.trackerapplication.util.GoogleMapConfig;
 
 import jp.wasabeef.picasso.transformations.CropCircleTransformation;
 
@@ -68,8 +76,47 @@ public class MainActivity extends AppCompatActivity
         userNameText.setText(currentUser.getDisplayName());
         emailAddressText.setText(currentUser.getEmail());
 
+        /**
+         * Change the status bar color*/
+
+        Window window = this.getWindow();
+        Configuration.changeStatusBarColor(window, this, R.color.colorPrimaryDark);
+
+        MaterialAnimatedSwitch locationSwitch = findViewById(R.id.locationSwitch);
+        locationSwitch.setOnCheckedChangeListener(new MaterialAnimatedSwitch.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(boolean isOnline) {
+
+                if (isOnline) {
+
+                    Intent intent = new Intent(MainActivity.this, TrackerActivity.class);
+                    startActivity(intent);
+
+                }else {
+
+                }
+            }
+        });
 
 
+        //style the map
+        createMapObject();
+
+
+    }
+
+    private void createMapObject() {
+
+        GoogleMapConfig googleMapConfig = new GoogleMapConfig(this);
+        assignTheMap(googleMapConfig);
+    }
+
+    private void assignTheMap(GoogleMapConfig googleMapConfig) {
+
+        SupportMapFragment mapFragment =
+                (SupportMapFragment) getSupportFragmentManager()
+                        .findFragmentById(R.id.mapDriver);
+        mapFragment.getMapAsync(googleMapConfig);
     }
 
     @Override
@@ -136,6 +183,11 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(MainActivity.this, "signed out", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, SignInActivity.class);
             startActivity(intent);
+        }else if (id == R.id.userProfile) {
+
+            Intent profileIntent = new Intent(this, UserProfileActivity.class);
+            startActivity(profileIntent);
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

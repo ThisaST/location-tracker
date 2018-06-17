@@ -56,7 +56,6 @@ public class TrackerService extends Service {
         firebaseAuthBusDriver = FirebaseAuth.getInstance().getCurrentUser();
 
         buildNotification();
-        //loginToFirebase();
         requestLocationUpdates();
     }
 
@@ -85,25 +84,6 @@ public class TrackerService extends Service {
         }
     };
 
-    private void loginToFirebase() {
-        // Functionality coming next step
-        String email = getString(R.string.firebase_email);
-        String password = getString(R.string.firebase_password);
-
-        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-        FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                currentUser.getEmail(), password).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
-            @Override
-            public void onComplete(Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Log.d(TAG, "firebase auth success");
-                    requestLocationUpdates();
-                } else {
-                    Log.d(TAG, "firebase auth failed");
-                }
-            }
-        });
-    }
 
     private void requestLocationUpdates() {
         // Functionality coming next step

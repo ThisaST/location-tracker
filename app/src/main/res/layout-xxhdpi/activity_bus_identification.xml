@@ -30,7 +30,7 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/availableBusList"
         android:layout_width="match_parent"
-        android:layout_height="421dp"
+        android:layout_height="459dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="8dp"
@@ -42,7 +42,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.274">
+        app:layout_constraintVertical_bias="0.353">
 
     </android.support.v7.widget.RecyclerView>
 
