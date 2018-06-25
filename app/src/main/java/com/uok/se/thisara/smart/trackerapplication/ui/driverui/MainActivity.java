@@ -2,6 +2,8 @@ package com.uok.se.thisara.smart.trackerapplication.ui.driverui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -37,6 +39,10 @@ public class MainActivity extends AppCompatActivity
 
 
     private FirebaseUser currentUser;
+    private SupportMapFragment mapFragment;
+    private GoogleMapConfig googleMapConfig;
+
+    private MaterialAnimatedSwitch locationSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,45 +82,65 @@ public class MainActivity extends AppCompatActivity
         userNameText.setText(currentUser.getDisplayName());
         emailAddressText.setText(currentUser.getEmail());
 
+        createMapObject();
         /**
          * Change the status bar color*/
 
         Window window = this.getWindow();
         Configuration.changeStatusBarColor(window, this, R.color.colorPrimaryDark);
 
-        MaterialAnimatedSwitch locationSwitch = findViewById(R.id.locationSwitch);
+        locationSwitch = findViewById(R.id.locationSwitch);
         locationSwitch.setOnCheckedChangeListener(new MaterialAnimatedSwitch.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(boolean isOnline) {
 
                 if (isOnline) {
 
+                    /*googleMapConfig.buildGoogleApiClient();
+                    googleMapConfig.createLocationRequest();
+                    googleMapConfig.startLocationUpdates();
+                    googleMapConfig.displayLocation();*/
                     Intent intent = new Intent(MainActivity.this, TrackerActivity.class);
+                    Snackbar.make(mapFragment.getView(), "You are Online", Snackbar.LENGTH_SHORT).show();
                     startActivity(intent);
 
                 }else {
 
+                    /*googleMapConfig.stopLocationUpdates();*/
+                    Snackbar.make(mapFragment.getView(), "You are Offline", Snackbar.LENGTH_SHORT).show();
                 }
             }
         });
 
 
         //style the map
-        createMapObject();
+
 
 
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        googleMapConfig.onPermissionResult(requestCode, grantResults);
+
+        if (locationSwitch.isChecked()) {
+
+            googleMapConfig.buildGoogleApiClient();
+            googleMapConfig.createLocationRequest();
+            googleMapConfig.displayLocation();
+        }
+    }
+
     private void createMapObject() {
 
-        GoogleMapConfig googleMapConfig = new GoogleMapConfig(this);
+        googleMapConfig = new GoogleMapConfig(this);
         assignTheMap(googleMapConfig);
     }
 
     private void assignTheMap(GoogleMapConfig googleMapConfig) {
 
-        SupportMapFragment mapFragment =
-                (SupportMapFragment) getSupportFragmentManager()
+        mapFragment = (SupportMapFragment) getSupportFragmentManager()
                         .findFragmentById(R.id.mapDriver);
         mapFragment.getMapAsync(googleMapConfig);
     }

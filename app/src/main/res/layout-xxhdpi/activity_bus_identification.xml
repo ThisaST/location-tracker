@@ -69,7 +69,7 @@
         app:layout_constraintTop_toTopOf="@+id/availableBusList"
         app:layout_constraintVertical_bias="0.984" />
 
-    <Button
+    <!--<Button
         android:id="@+id/mainMenu"
         android:layout_width="323dp"
         android:layout_height="45dp"
@@ -90,7 +90,7 @@
         app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.877" />
+        app:layout_constraintVertical_bias="0.877" />-->
 
 
 

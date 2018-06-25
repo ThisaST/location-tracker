@@ -78,6 +78,9 @@ dependencies {
 
     //waiting dialog box
     implementation 'com.github.d-max:spots-dialog:0.7@aar'
+
+    //chart library
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
 }
 
 

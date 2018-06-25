@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
     <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
 
     <uses-feature
@@ -81,17 +83,20 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".ui.driverui.BusRouteActivity" />
-        <activity android:name=".ui.driverui.BusHistoryActivity" />
+
+        <activity android:name=".ui.driverui.BusHistoryActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ui.riderui.RiderActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.SelectUserTypeActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ui.LocationSelectorActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".ui.UserProfileActivity"></activity>
+        <activity android:name=".ui.UserProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

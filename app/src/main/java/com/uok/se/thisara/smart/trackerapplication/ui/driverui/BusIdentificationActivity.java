@@ -53,11 +53,12 @@ public class BusIdentificationActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(BusIdentificationActivity.this, AddNewBusActivity.class);
                 startActivity(intent);
+                BusIdentificationActivity.this.overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 
             }
         });
 
-        Button mainMenuButton = findViewById(R.id.mainMenu);
+        /*Button mainMenuButton = findViewById(R.id.mainMenu);
 
         mainMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +68,7 @@ public class BusIdentificationActivity extends AppCompatActivity {
                 startActivity(intent);
 
             }
-        });
+        });*/
 
         waitingDialog = new SpotsDialog(BusIdentificationActivity.this);
         waitingDialog.show();
@@ -76,17 +77,6 @@ public class BusIdentificationActivity extends AppCompatActivity {
 
     }
 
-    private void waitingTimeToLoadData() {
-
-        final SpotsDialog waitingDialog = new SpotsDialog(BusIdentificationActivity.this);
-        waitingDialog.show();
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        waitingDialog.dismiss();
-    }
 
     private void initializeAdapter() {
 
@@ -128,8 +118,11 @@ public class BusIdentificationActivity extends AppCompatActivity {
         newBus.setOwnerName(busValues.get("ownerName").toString());
         newBus.setImageId(Integer.parseInt(busValues.get("imageId").toString()));
 
+
+
         busList = new ArrayList<>();
         busList.add(newBus);
+        busList.add(new Bus("wpXA-1234", "Nilupul Shenal", 2, "LEYLAND"));
         int size= busList.size();
         System.out.println(size);
 

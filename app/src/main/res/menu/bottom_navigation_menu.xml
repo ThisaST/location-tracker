@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/distanceItem"
+        android:enabled="true"
+        android:icon="@drawable/distance"
+        android:title="Distance"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/durationItem"
+        android:enabled="true"
+        android:icon="@drawable/duration"
+        android:title="Duration"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/breakdownItem"
+        android:enabled="true"
+        android:icon="@drawable/breakdowns"
+        android:title="Breakdowns"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -22,4 +22,7 @@
 
     <string name="driver_login">Driver Login</string>
     <string name="rider_login">Rider Login</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

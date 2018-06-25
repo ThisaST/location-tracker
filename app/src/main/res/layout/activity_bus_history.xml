@@ -6,4 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".ui.driverui.BusHistoryActivity">
 
+    <!--<RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/gradient_color_for_square">
+
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="70dp"
+                android:layout_height="67dp"
+                android:text="340"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:textColor="@color/basePressColor"/>
+        </LinearLayout>
+    </RelativeLayout>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="508dp"
+        android:id="@+id/fragmentContainer">
+
+    </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottom_navigation_menu">
+
+    </android.support.design.widget.BottomNavigationView>
+
 </android.support.constraint.ConstraintLayout>

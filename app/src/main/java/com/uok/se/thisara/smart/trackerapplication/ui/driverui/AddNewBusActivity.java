@@ -139,7 +139,7 @@ public class AddNewBusActivity extends AppCompatActivity {
                 "Cancel" };
 
         AlertDialog.Builder builder = new AlertDialog.Builder(AddNewBusActivity.this);
-        builder.setTitle("Add Photo!");
+        builder.setTitle("Add Image");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int item) {
