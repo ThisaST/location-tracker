@@ -28,4 +28,6 @@
     <color name="gradEnd">#67EFC8</color>
     <color name="gradStart">#63C9FF</color>
 
+    <color name="black_overlay">#66000000</color>
+
 </resources>

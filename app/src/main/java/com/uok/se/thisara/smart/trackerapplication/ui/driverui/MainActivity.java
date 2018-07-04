@@ -26,7 +26,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 import com.uok.se.thisara.smart.trackerapplication.R;
+import com.uok.se.thisara.smart.trackerapplication.ui.SelectUserTypeActivity;
 import com.uok.se.thisara.smart.trackerapplication.ui.SignInActivity;
+import com.uok.se.thisara.smart.trackerapplication.ui.SplashScreenActivity;
 import com.uok.se.thisara.smart.trackerapplication.ui.TrackerActivity;
 import com.uok.se.thisara.smart.trackerapplication.ui.UserProfileActivity;
 import com.uok.se.thisara.smart.trackerapplication.util.Configuration;
@@ -116,6 +118,13 @@ public class MainActivity extends AppCompatActivity
         //style the map
 
 
+        userImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, UserProfileActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -207,13 +216,8 @@ public class MainActivity extends AppCompatActivity
 
             FirebaseAuth.getInstance().signOut();
             Toast.makeText(MainActivity.this, "signed out", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, SignInActivity.class);
+            Intent intent = new Intent(this, SelectUserTypeActivity.class);
             startActivity(intent);
-        }else if (id == R.id.userProfile) {
-
-            Intent profileIntent = new Intent(this, UserProfileActivity.class);
-            startActivity(profileIntent);
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

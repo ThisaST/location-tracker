@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
 
@@ -25,11 +25,14 @@
         <activity
             android:name=".ui.SignInActivity"
             android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            -->
         </activity>
         <activity android:name=".ui.TrackerActivity">
 
@@ -81,22 +84,47 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".ui.driverui.BusRouteActivity" />
-
-        <activity android:name=".ui.driverui.BusHistoryActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".ui.driverui.BusRouteActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.driverui.BusHistoryActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.riderui.RiderActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.SelectUserTypeActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.LocationSelectorActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".ui.UserProfileActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".ui.riderui.LocationSelectorActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.UserProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.SplashScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.driverui.DriverLocationActivity"
+            android:label="@string/title_activity_driver_location" />
+        <activity
+            android:name=".ui.driverui.SingleBusViewActivity"
+            android:label="@string/title_activity_single_bus_view"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
     </application>
 
 </manifest>

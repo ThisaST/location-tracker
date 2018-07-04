@@ -7,8 +7,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.Window;
 
 import com.uok.se.thisara.smart.trackerapplication.R;
+import com.uok.se.thisara.smart.trackerapplication.util.Configuration;
 
 public class BusHistoryActivity extends AppCompatActivity {
 
@@ -47,5 +49,9 @@ public class BusHistoryActivity extends AppCompatActivity {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragmentContainer, DistanceTravelFragment.newInstance());
         transaction.commit();
+
+        Window window = this.getWindow();
+
+        Configuration.changeStatusBarColor(window, this, R.color.colorPrimaryDark);
     }
 }

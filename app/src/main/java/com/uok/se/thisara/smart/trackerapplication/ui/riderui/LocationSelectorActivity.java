@@ -1,4 +1,4 @@
-package com.uok.se.thisara.smart.trackerapplication.ui;
+package com.uok.se.thisara.smart.trackerapplication.ui.riderui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

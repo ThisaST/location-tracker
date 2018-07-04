@@ -7,6 +7,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.uok.se.thisara.smart.trackerapplication.R;
+import com.uok.se.thisara.smart.trackerapplication.remote.IGoogleAPI;
 import com.uok.se.thisara.smart.trackerapplication.remote.LocationClient;
 import com.uok.se.thisara.smart.trackerapplication.remote.RetrofitClient;
 
@@ -17,6 +18,13 @@ import com.uok.se.thisara.smart.trackerapplication.remote.RetrofitClient;
 public class Configuration {
 
     public static final String baseUrl = "http://192.168.8.100:8080";
+    public static final String baseURL = "https://maps.googleapis.com";
+
+
+    public static IGoogleAPI getGoogleApi() {
+
+        return RetrofitClient.getRetrofitClient(baseURL).create(IGoogleAPI.class);
+    }
 
     public static LocationClient sendLocation() {
 

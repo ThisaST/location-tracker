@@ -4,18 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.LocationSelectorActivity">
+    tools:context=".ui.riderui.LocationSelectorActivity">
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="106dp"
-        android:src="@drawable/rectangle_element" />
+        android:layout_height="53dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:tooltipText="Destination"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Destination"
+            android:textColor="@color/basePressColor"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </android.support.v7.widget.Toolbar>
+
+
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="103dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.145">
 
         <EditText
             android:id="@+id/currentLocation"
@@ -23,10 +50,11 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_location_current_white"
             android:drawablePadding="5dp"
+            android:drawableTint="@color/colorPrimary"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Current Location"
-            android:textColorHint="@color/basePressColor"/>
+            android:inputType="textPersonName"
+            android:textColorHint="@android:color/black" />
 
         <EditText
             android:id="@+id/destination"
@@ -34,11 +62,11 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/destination_white"
             android:drawablePadding="5dp"
+            android:drawableTint="@color/colorPrimary"
             android:ems="10"
             android:hint="Destination"
             android:inputType="textPersonName"
-            android:textColorHint="@color/basePressColor"/>
-
+            android:textColorHint="@android:color/black" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

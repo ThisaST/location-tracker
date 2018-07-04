@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -22,6 +23,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.uok.se.thisara.smart.trackerapplication.R;
+import com.uok.se.thisara.smart.trackerapplication.ui.driverui.DriverLocationActivity;
+import com.uok.se.thisara.smart.trackerapplication.ui.driverui.MainActivity;
+import com.uok.se.thisara.smart.trackerapplication.ui.riderui.RiderActivity;
+import com.uok.se.thisara.smart.trackerapplication.util.Configuration;
 import com.uok.se.thisara.smart.trackerapplication.viewmodel.SIgnInActivityViewModel;
 
 public class  SignInActivity extends AppCompatActivity {
@@ -31,7 +36,7 @@ public class  SignInActivity extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
     private final int RC_SIGN_IN = 1;
     private FirebaseAuth mAuth;
-
+    private String userType;
 
     private SIgnInActivityViewModel sIgnInActivityViewModel;
 
@@ -50,6 +55,10 @@ public class  SignInActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, mGoogleSignInOptions);
+
+        Intent intent = getIntent();
+        userType = intent.getStringExtra("driverOrPassenger");
+
 
         SignInButton signInButton = findViewById(R.id.signInButton);
         signInButton.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +81,10 @@ public class  SignInActivity extends AppCompatActivity {
 
             }
         });*/
+
+        Window window = this.getWindow();
+
+        Configuration.changeStatusBarColor(window, this, R.color.colorPrimaryDark);
     }
 
     private void signIn() {
@@ -110,8 +123,16 @@ public class  SignInActivity extends AppCompatActivity {
     private void updateUI(FirebaseUser currentUser) {
 
         Toast.makeText(SignInActivity.this, "Success" + currentUser.getDisplayName(), Toast.LENGTH_SHORT).show();
-        Intent mainViewIntent = new Intent(SignInActivity.this, SelectUserTypeActivity.class);
-        startActivity(mainViewIntent);
+
+        if (userType.equals("Driver")) {
+            Intent mainViewIntent = new Intent(SignInActivity.this, MainActivity.class);
+            startActivity(mainViewIntent);
+        } else if (userType.equals("Rider")) {
+
+            Intent mainViewIntent = new Intent(SignInActivity.this, RiderActivity.class);
+            startActivity(mainViewIntent);
+        }
+
 
     }
 

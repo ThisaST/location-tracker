@@ -4,42 +4,53 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.uok.se.thisara.smart.trackerapplication.R;
 import com.uok.se.thisara.smart.trackerapplication.ui.driverui.BusIdentificationActivity;
 import com.uok.se.thisara.smart.trackerapplication.ui.riderui.RiderActivity;
+import com.uok.se.thisara.smart.trackerapplication.util.Configuration;
 
 public class SelectUserTypeActivity extends AppCompatActivity {
 
-    private Button riderActivityLogin;
-    private Button driverActivityLogin;
+    RadioButton driverSelectionButton;
+    RadioButton passengerSelectionButton;
+    TextView selectUserType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_user_type);
 
-        riderActivityLogin = findViewById(R.id.busRiderLoginButton);
-        driverActivityLogin = findViewById(R.id.busDriverLoginButton);
+        driverSelectionButton = findViewById(R.id.driverRadioButton);
+        passengerSelectionButton = findViewById(R.id.passengerRadioButton);
+        selectUserType = findViewById(R.id.userSelectionText);
 
-        riderActivityLogin.setOnClickListener(new View.OnClickListener() {
+        selectUserType.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent riderViewIntent = new Intent(SelectUserTypeActivity.this, RiderActivity.class);
-                startActivity(riderViewIntent);
+                if (driverSelectionButton.isChecked()) {
+
+                    Intent driverViewIntent = new Intent(SelectUserTypeActivity.this, SignInActivity.class);
+                    driverViewIntent.putExtra("driverOrPassenger", "Driver");
+                    startActivity(driverViewIntent);
+                }else if (passengerSelectionButton.isChecked()) {
+
+                    Intent riderViewIntent = new Intent(SelectUserTypeActivity.this, SignInActivity.class);
+                    riderViewIntent.putExtra("driverOrPassenger", "Rider");
+                    startActivity(riderViewIntent);
+                }
             }
         });
 
-        driverActivityLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                Intent driverViewIntent = new Intent(SelectUserTypeActivity.this, BusIdentificationActivity.class);
-                startActivity(driverViewIntent);
-            }
-        });
+        Window window = this.getWindow();
+
+        Configuration.changeStatusBarColor(window, this, R.color.colorPrimaryDark);
 
     }
 }

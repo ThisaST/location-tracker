@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +25,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.uok.se.thisara.smart.trackerapplication.R;
 import com.uok.se.thisara.smart.trackerapplication.model.Bus;
+import com.uok.se.thisara.smart.trackerapplication.util.Configuration;
 import com.uok.se.thisara.smart.trackerapplication.util.RunTimePermission;
 
 import java.io.ByteArrayOutputStream;
@@ -87,6 +89,9 @@ public class AddNewBusActivity extends AppCompatActivity {
         });
 
 
+        Window window = this.getWindow();
+
+        Configuration.changeStatusBarColor(window, this, R.color.colorPrimaryDark);
     }
 
     private void goToBusIdentificationActivity() {

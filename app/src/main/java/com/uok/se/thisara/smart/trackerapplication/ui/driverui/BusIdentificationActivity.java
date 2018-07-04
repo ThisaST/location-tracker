@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.uok.se.thisara.smart.trackerapplication.R;
 import com.uok.se.thisara.smart.trackerapplication.model.Bus;
 import com.uok.se.thisara.smart.trackerapplication.ui.riderui.RiderActivity;
+import com.uok.se.thisara.smart.trackerapplication.util.Configuration;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -74,6 +76,10 @@ public class BusIdentificationActivity extends AppCompatActivity {
         waitingDialog.show();
 
         initializeData();
+
+        Window window = this.getWindow();
+
+        Configuration.changeStatusBarColor(window, this, R.color.colorPrimaryDark);
 
     }
 

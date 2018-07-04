@@ -123,16 +123,25 @@ public class GoogleMapConfig implements OnMapReadyCallback, GoogleApiClient.Conn
 
         mMap = googleMap;
 
+        mMap.setTrafficEnabled(true);
+        mMap.setBuildingsEnabled(true);
+        mMap.setIndoorEnabled(false);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+
         try {
             // Customise the styling of the base map using a JSON object defined
             // in a raw resource file.
             boolean success = googleMap.setMapStyle(
                     MapStyleOptions.loadRawResourceStyle(
                             mapContext, R.raw.uber_map_style));
+            /*LatLng sydney = new LatLng(-33.852, 151.211);
+            googleMap.addMarker(new MarkerOptions().position(sydney)
+                    .title("Marker in Sydney"));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
             if (!success) {
                 Log.e(TAG, "Style parsing failed.");
-            }
+            }*/
         } catch (Resources.NotFoundException e) {
             Log.e(TAG, "Can't find style. Error: ", e);
         }
