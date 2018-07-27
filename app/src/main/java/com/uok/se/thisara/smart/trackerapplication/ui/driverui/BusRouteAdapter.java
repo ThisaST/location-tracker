@@ -1,6 +1,7 @@
 package com.uok.se.thisara.smart.trackerapplication.ui.driverui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import com.squareup.picasso.Picasso;
 import com.uok.se.thisara.smart.trackerapplication.R;
 import com.uok.se.thisara.smart.trackerapplication.model.Bus;
 import com.uok.se.thisara.smart.trackerapplication.model.BusRoute;
+import com.uok.se.thisara.smart.trackerapplication.ui.RouteMapActivity;
 
 import java.util.List;
 
@@ -89,6 +91,15 @@ public class BusRouteAdapter extends RecyclerView.Adapter<BusRouteAdapter.BusRou
                     .placeholder(R.drawable.common_google_signin_btn_icon_dark)
                     .into(holder.busRouteImage);
         }
+
+        holder.singleView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(mContext, RouteMapActivity.class);
+                mContext.startActivity(intent);
+            }
+        });
 
     }
 

@@ -6,11 +6,11 @@ import android.arch.lifecycle.ViewModel;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SIgnInActivityViewModel extends ViewModel {
+public class SignInActivityViewModel extends ViewModel {
 
     private MutableLiveData<FirebaseAuth> firebaseAuthMutableLiveData;
 
-    public SIgnInActivityViewModel() {
+    public SignInActivityViewModel() {
 
         firebaseAuthMutableLiveData = new MutableLiveData<>();
     }

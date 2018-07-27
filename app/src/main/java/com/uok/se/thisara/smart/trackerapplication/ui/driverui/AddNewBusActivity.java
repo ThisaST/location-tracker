@@ -33,12 +33,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.List;
 
 public class AddNewBusActivity extends AppCompatActivity {
 
     private Button addNewBusButton;
     private EditText vehicleNumber;
     private EditText ownerName;
+    private EditText contactNumber;
     private Spinner vehicleModel;
     private ImageButton vehicleImage;
     private int GALLERY = 1;
@@ -57,6 +59,7 @@ public class AddNewBusActivity extends AppCompatActivity {
         addNewBusButton = findViewById(R.id.addNewBusButton);
         vehicleNumber = findViewById(R.id.vehicleRegisterNo);
         ownerName = findViewById(R.id.ownerName);
+        contactNumber = findViewById(R.id.contactNo);
         vehicleImage = findViewById(R.id.vehicleImageButton);
         vehicleModel = findViewById(R.id.busModelSpinner);
 
@@ -103,6 +106,8 @@ public class AddNewBusActivity extends AppCompatActivity {
     private void storeDataInFirebase() {
 
         mDatabase = FirebaseDatabase.getInstance();
+
+
         String dbPath = "bus/" + FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
         DatabaseReference dbReference = mDatabase.getReference(dbPath);
 
@@ -231,5 +236,15 @@ public class AddNewBusActivity extends AppCompatActivity {
         }
 
         vehicleImage.setImageBitmap(bm);
+    }
+
+    public int generateIdForBus() {
+
+        int newBusId = 0;
+
+
+        //bus list size
+        //add one to the variable to create the new bus id
+        return newBusId;
     }
 }

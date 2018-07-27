@@ -1,0 +1,489 @@
+{
+  "locations": [
+    {
+      "name": "Kadawatha",
+      "latitude": "7.0014245",
+      "longitude": "79.9498839"
+    },
+    {
+      "name": "",
+      "latitude": "7.0014245",
+      "longitude": "79.9498839"
+    },
+    {
+      "name": "",
+      "latitude": "7.002349",
+      "longitude": "79.952664"
+    },
+    {
+      "name": "",
+      "latitude": "7.002136",
+      "longitude": "79.952052"
+    },
+    {
+      "name": "",
+      "latitude": "7.001337",
+      "longitude": "79.950528"
+    },
+    {
+      "name": "",
+      "latitude": "7.001092",
+      "longitude": "79.950152"
+    },
+    {
+      "name": "",
+      "latitude": "7.000900",
+      "longitude": "79.949830"
+    },
+    {
+      "name": "",
+      "latitude": "7.000644",
+      "longitude": "79.949186"
+    },
+    {
+      "name": "",
+      "latitude": "7.000356",
+      "longitude": "79.948703"
+    },
+    {
+      "name": "",
+      "latitude": "7.000037",
+      "longitude": "79.948446"
+    },
+    {
+      "name": "",
+      "latitude": "6.999781",
+      "longitude": "79.948296"
+    },
+    {
+      "name": "",
+      "latitude": "6.999356",
+      "longitude": "79.948168"
+    },
+    {
+      "name": "",
+      "latitude": "6.998344",
+      "longitude": "79.948297"
+    },
+    {
+      "name": "",
+      "latitude": "6.997662",
+      "longitude": "79.948254"
+    },
+    {
+      "name": "",
+      "latitude": "6.997215",
+      "longitude": "79.948168"
+    },
+    {
+      "name": "",
+      "latitude": "6.996651",
+      "longitude": "79.947964"
+    },
+    {
+      "name": "",
+      "latitude": "6.996279",
+      "longitude": "79.947660"
+    },
+    {
+      "name": "",
+      "latitude": "6.995383",
+      "longitude": "79.946737"
+    },
+    {
+      "name": "9th mile post",
+      "latitude": "6.994655",
+      "longitude": "79.945376"
+    },
+    {
+      "name": "",
+      "latitude": "6.993961",
+      "longitude": "79.944366"
+    },
+    {
+      "name": "",
+      "latitude": "6.992571",
+      "longitude": "79.942810"
+    },
+    {
+      "name": "",
+      "latitude": "6.992241",
+      "longitude": "79.942086"
+    },
+    {
+      "name": "",
+      "latitude": "6.991570",
+      "longitude": "79.941512"
+    },
+    {
+      "name": "Mahara junction bus stop",
+      "latitude": "6.991229",
+      "longitude": "79.940992"
+    },
+    {
+      "name": "",
+      "latitude": "6.991005",
+      "longitude": "79.940139"
+    },
+    {
+      "name": "",
+      "latitude": "6.991000",
+      "longitude": "79.939039"
+    },
+    {
+      "name": "",
+      "latitude": "6.990792",
+      "longitude": "79.938717"
+    },
+    {
+      "name": "",
+      "latitude": "6.989605",
+      "longitude": "79.938202"
+    },
+    {
+      "name": "",
+      "latitude": "6.987795",
+      "longitude": "79.937188"
+    },
+    {
+      "name": "",
+      "latitude": "6.986996",
+      "longitude": "79.936426"
+    },
+    {
+      "name": "",
+      "latitude": "6.986788",
+      "longitude": "79.936077"
+    },
+    {
+      "name": "",
+      "latitude": "6.986570",
+      "longitude": "79.935390"
+    },
+    {
+      "name": "",
+      "latitude": "6.985787",
+      "longitude": "79.934687"
+    },
+    {
+      "name": "Gala junction bus stop",
+      "latitude": "6.984190",
+      "longitude": "79.933137"
+    },
+    {
+      "name": "",
+      "latitude": "6.982641",
+      "longitude": "79.931495"
+    },
+    {
+      "name": "Kiribathgoda bus stand bus stop",
+      "latitude": "6.980564",
+      "longitude": "79.929634"
+    },
+    {
+      "name": "Kiribathgoda junction bus stop",
+      "latitude": "6.977486",
+      "longitude": "79.926620"
+    },
+    {
+      "name": "",
+      "latitude": "6.976362",
+      "longitude": "79.925477"
+    },
+    {
+      "name": "",
+      "latitude": "6.975537",
+      "longitude": "79.924721"
+    },
+    {
+      "name": "Kiribathgoda junction bus stop",
+      "latitude": "6.974307",
+      "longitude": "79.922575"
+    },
+    {
+      "name": "Dasa bus stop",
+      "latitude": "6.973322",
+      "longitude": "79.919963"
+    },
+    {
+      "name": "",
+      "latitude": "6.972843",
+      "longitude": "79.917994"
+    },
+    {
+      "name": "",
+      "latitude": "6.972545",
+      "longitude": "79.917549"
+    },
+    {
+      "name": "Kelani Campus bus stop",
+      "latitude": "6.971810",
+      "longitude": "79.916798"
+    },
+    {
+      "name": "",
+      "latitude": "6.970410",
+      "longitude": "79.914888"
+    },
+    {
+      "name": "Tyre Junction bus stop",
+      "latitude": "6.969606",
+      "longitude": "79.913343"
+    },
+    {
+      "name": "",
+      "latitude": "6.967961",
+      "longitude": "79.909856"
+    },
+    {
+      "name": "",
+      "latitude": "6.967034",
+      "longitude": "79.907850"
+    },
+    {
+      "name": "Bulugaha Junction bus stop",
+      "latitude": "6.967183",
+      "longitude": "79.906380"
+    },
+    {
+      "name": "",
+      "latitude": "6.967620",
+      "longitude": "79.905200"
+    },
+    {
+      "name": "",
+      "latitude": "6.967641",
+      "longitude": "79.905146"
+    },
+    {
+      "name": "",
+      "latitude": "6.967795",
+      "longitude": "79.902534"
+    },
+    {
+      "name": "Thorana Junction bus stop",
+      "latitude": "6.967161",
+      "longitude": "79.900796"
+    },
+    {
+      "name": "",
+      "latitude": "6.966676",
+      "longitude": "79.899358"
+    },
+    {
+      "name": "",
+      "latitude": "6.966181",
+      "longitude": "79.898687"
+    },
+    {
+      "name": "Pattiya Junction bus stop",
+      "latitude": "6.961884",
+      "longitude": "79.894235"
+    },
+    {
+      "name": "",
+      "latitude": "6.957880",
+      "longitude": "79.890158"
+    },
+    {
+      "name": "",
+      "latitude": "6.956101",
+      "longitude": "79.888286"
+    },
+    {
+      "name": "4th Mile Post",
+      "latitude": "6.955627",
+      "longitude": "79.886714"
+    },
+    {
+      "name": "",
+      "latitude": "6.955718",
+      "longitude": "79.883919"
+    },
+    {
+      "name": "",
+      "latitude": "6.955729",
+      "longitude": "79.883522"
+    },
+    {
+      "name": "",
+      "latitude": "6.955591",
+      "longitude": "79.883066"
+    },
+    {
+      "name": "New Kelani Bridge bus stop",
+      "latitude": "6.952779",
+      "longitude": "79.880657"
+    },
+    {
+      "name": "",
+      "latitude": "6.950612",
+      "longitude": "79.878710"
+    },
+    {
+      "name": "",
+      "latitude": "6.950383",
+      "longitude": "79.878115"
+    },
+    {
+      "name": "",
+      "latitude": "6.950910",
+      "longitude": "79.874285"
+    },
+    {
+      "name": "",
+      "latitude": "6.950691",
+      "longitude": "79.873969"
+    },
+    {
+      "name": "",
+      "latitude": "6.946335",
+      "longitude": "79.868953"
+    },
+    {
+      "name": "",
+      "latitude": "6.944658",
+      "longitude": "79.867027"
+    },
+    {
+      "name": "",
+      "latitude": "6.944030",
+      "longitude": "79.866002"
+    },
+    {
+      "name": "",
+      "latitude": "6.943519",
+      "longitude": "79.864672"
+    },
+    {
+      "name": "",
+      "latitude": "6.943354",
+      "longitude": "79.864484"
+    },
+    {
+      "name": "",
+      "latitude": "6.943162",
+      "longitude": "79.864420"
+    },
+    {
+      "name": "Armours street bus stop",
+      "latitude": "6.942624",
+      "longitude": "79.864639"
+    },
+    {
+      "name": "",
+      "latitude": "6.939802",
+      "longitude": "79.865969"
+    },
+    {
+      "name": "",
+      "latitude": "6.938865",
+      "longitude": "79.866366"
+    },
+    {
+      "name": "",
+      "latitude": "6.936005",
+      "longitude": "79.866387"
+    },
+    {
+      "name": "",
+      "latitude": "6.934076",
+      "longitude": "79.866095"
+    },
+    {
+      "name": "",
+      "latitude": "6.933512",
+      "longitude": "79.865961"
+    },
+    {
+      "name": "",
+      "latitude": "6.932804",
+      "longitude": "79.865618"
+    },
+    {
+      "name": "",
+      "latitude": "6.932261",
+      "longitude": "79.865318"
+    },
+    {
+      "name": "",
+      "latitude": "6.931574",
+      "longitude": "79.865141"
+    },
+    {
+      "name": "",
+      "latitude": "6.930323",
+      "longitude": "79.865023"
+    },
+    {
+      "name": "",
+      "latitude": "6.929652",
+      "longitude": "79.864749"
+    },
+    {
+      "name": "",
+      "latitude": "6.929253",
+      "longitude": "79.864347"
+    },
+    {
+      "name": "",
+      "latitude": "6.929051",
+      "longitude": "79.864116"
+    },
+    {
+      "name": "",
+      "latitude": "6.929115",
+      "longitude": "79.863751"
+    },
+    {
+      "name": "Maradana Railway bus stop",
+      "latitude": "6.929679",
+      "longitude": "79.863102"
+    },
+    {
+      "name": "",
+      "latitude": "6.932134",
+      "longitude": "79.860597"
+    },
+    {
+      "name": "",
+      "latitude": "6.932214",
+      "longitude": "79.860490"
+    },
+    {
+      "name": "",
+      "latitude": "6.931825",
+      "longitude": "79.859331"
+    },
+    {
+      "name": "",
+      "latitude": "6.932006",
+      "longitude": "79.857893"
+    },
+    {
+      "name": "",
+      "latitude": "6.933923",
+      "longitude": "79.855838"
+    },
+    {
+      "name": "",
+      "latitude": "6.934866",
+      "longitude": "79.853698"
+    },
+    {
+      "name": "Pettah private bus stand stop",
+      "latitude": "6.934893",
+      "longitude": "79.853247"
+    },
+    {
+      "name": "",
+      "latitude": "6.934403",
+      "longitude": "79.851697"
+    },
+    {
+      "name": "Pettah bus stop",
+      "latitude": "6.934041",
+      "longitude": "79.850233"
+    }
+  ]
+}

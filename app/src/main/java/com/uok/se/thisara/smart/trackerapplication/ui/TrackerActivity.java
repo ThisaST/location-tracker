@@ -9,6 +9,8 @@ import android.support.v4.content.ContextCompat;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.uok.se.thisara.smart.trackerapplication.service.TrackerService;
+
 public class TrackerActivity extends Activity {
 
     private static final int PERMISSIONS_REQUEST = 1;
@@ -26,8 +28,7 @@ public class TrackerActivity extends Activity {
 
         // Check location permission is granted - if it is, start
         // the service, otherwise request the permission
-        int permission = ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.ACCESS_FINE_LOCATION);
+        int permission = ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION);
         if (permission == PackageManager.PERMISSION_GRANTED) {
             startTrackerService();
         } else {

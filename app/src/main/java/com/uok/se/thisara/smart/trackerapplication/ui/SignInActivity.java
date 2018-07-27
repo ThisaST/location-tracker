@@ -23,11 +23,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.uok.se.thisara.smart.trackerapplication.R;
-import com.uok.se.thisara.smart.trackerapplication.ui.driverui.DriverLocationActivity;
 import com.uok.se.thisara.smart.trackerapplication.ui.driverui.MainActivity;
 import com.uok.se.thisara.smart.trackerapplication.ui.riderui.RiderActivity;
 import com.uok.se.thisara.smart.trackerapplication.util.Configuration;
-import com.uok.se.thisara.smart.trackerapplication.viewmodel.SIgnInActivityViewModel;
+import com.uok.se.thisara.smart.trackerapplication.viewmodel.SignInActivityViewModel;
 
 public class  SignInActivity extends AppCompatActivity {
 
@@ -38,7 +37,7 @@ public class  SignInActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private String userType;
 
-    private SIgnInActivityViewModel sIgnInActivityViewModel;
+    private SignInActivityViewModel sIgnInActivityViewModel;
 
 
     @Override
@@ -73,7 +72,7 @@ public class  SignInActivity extends AppCompatActivity {
          * Use of view model to get the data from the firebase and use in the SignInActivity
          * */
 
-        /*sIgnInActivityViewModel = ViewModelProviders.of(this).get(SIgnInActivityViewModel.class);
+        /*sIgnInActivityViewModel = ViewModelProviders.of(this).get(SignInActivityViewModel.class);
         sIgnInActivityViewModel.getFirebaseUserDetails().observe(this, new Observer<FirebaseAuth>() {
             @Override
             public void onChanged(@Nullable FirebaseAuth firebaseAuth) {

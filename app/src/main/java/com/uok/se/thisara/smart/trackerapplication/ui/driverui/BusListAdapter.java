@@ -100,8 +100,13 @@ public class BusListAdapter extends RecyclerView.Adapter<BusListAdapter.BusViewH
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(mContext, MainActivity.class);
+                //create an object to pass the bus to the main activity
+                Bus selectedBus = new Bus(busList.get(position).getRegistrationNo(), busList.get(position).getOwnerName(), busList.get(position).getImageId(), busList.get(position).getBusModel());
+
+                Intent intent = new Intent(mContext, SingleBusViewActivity.class);
+                intent.putExtra("Bus", selectedBus);
                 mContext.startActivity(intent);
+
                 Toast.makeText(mContext,busList.get(position).getRegistrationNo(), Toast.LENGTH_SHORT);
             }
         });

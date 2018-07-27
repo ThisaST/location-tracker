@@ -22,7 +22,8 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            android:layout_gravity="top">
+            android:layout_gravity="top"
+            app:title="Rider    ">
 
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>

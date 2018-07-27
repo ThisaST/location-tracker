@@ -1,13 +1,24 @@
 package com.uok.se.thisara.smart.trackerapplication.model;
 
-public class Bus {
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.PrimaryKey;
+import android.os.Parcel;
+import android.os.Parcelable;
 
+import java.io.Serializable;
+
+@Entity
+public class Bus implements Serializable {
+
+    @PrimaryKey
+    private int busId;
     private String registrationNo;
     private String ownerName;
     private Integer imageId;
     private String busModel;
 
-
+    @Ignore
     public Bus() {
     }
 
@@ -16,6 +27,14 @@ public class Bus {
         this.ownerName = ownerName;
         this.imageId = imageId;
         this.busModel = busModel;
+    }
+
+    public int getBusId() {
+        return busId;
+    }
+
+    public void setBusId(int busId) {
+        this.busId = busId;
     }
 
     public String getRegistrationNo() {
@@ -49,4 +68,14 @@ public class Bus {
     public void setBusModel(String busModel) {
         this.busModel = busModel;
     }
+
+    /*@Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+
+    }*/
 }

@@ -23,6 +23,9 @@ ext {
 }
 
 dependencies {
+
+    def room_version = "1.1.1"
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support:recyclerview-v7:26.1.0'
@@ -82,6 +85,17 @@ dependencies {
 
     //chart library
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    //dagger2 dependency
+    implementation 'com.google.dagger:dagger:2.11'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+
+    //android Room for SQLite
+
+
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+
 }
 
 

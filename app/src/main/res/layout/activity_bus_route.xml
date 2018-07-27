@@ -20,14 +20,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bus Route"
-            android:textColor="@color/basePressColor"
-            android:textSize="20sp" />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Bus Route"
+        app:titleTextColor="@color/white">
 
     </android.support.v7.widget.Toolbar>
 

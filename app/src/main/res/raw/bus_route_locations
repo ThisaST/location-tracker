@@ -1,0 +1,220 @@
+Route = 138
+locations[0]
+  name = Kadawatha
+  latitude = 7.0014245
+  longitude = 79.9498839
+
+7.002349, 79.952664
+7.002136, 79.952052
+7.001806, 79.951172
+7.001337, 79.950528
+7.001092, 79.950152
+7.000900, 79.949830
+7.000644, 79.949186
+7.000356, 79.948703
+7.000037, 79.948446
+6.999781, 79.948296
+6.999356, 79.948168
+6.998344, 79.948297
+6.997662, 79.948254
+6.997215, 79.948168
+6.996651, 79.947964
+6.996279, 79.947660
+6.995383, 79.946737
+
+
+
+locations[1]
+  name = 9th mile post
+  latitude = 6.994655
+  longitude = 79.945376
+
+6.993961, 79.944366
+6.992571, 79.942810
+6.992241, 79.942086
+6.991570, 79.941512
+
+locations[2]
+  name = Mahara junction bus stop
+  latitude = 6.991229
+  longitude = 79.940992
+
+6.991005, 79.940139
+6.991000, 79.939039
+6.990792, 79.938717
+6.989605, 79.938202
+6.987795, 79.937188
+6.986996, 79.936426
+6.986788, 79.936077
+6.986570, 79.935390
+6.985787, 79.934687
+
+
+
+locations[3]
+  name =  Gala junction bus stop
+  latitude = 6.984190
+  longitude = 79.933137
+
+6.982641, 79.931495
+
+
+
+locations[4]
+  name =  Kiribathgoda bus stand bus stop
+  latitude = 6.980564
+  longitude = 79.929634
+
+
+locations[5]
+  name =  Kiribathgoda junction bus stop
+  latitude = 6.977486
+  longitude = 79.926620
+
+6.976362, 79.925477
+6.975537, 79.924721
+
+
+locations[6]
+  name =  Kiribathgoda junction bus stop
+  latitude = 6.974307
+  longitude = 79.922575
+
+
+locations[7]
+  name =  Dasa bus stop
+  latitude = 6.973322
+  longitude = 79.919963
+
+6.972843, 79.917994
+6.972545, 79.917549
+
+
+locations[8]
+  name =  Kelani Campus bus stop
+  latitude = 6.971810
+  longitude = 79.916798
+
+6.970410, 79.914888
+
+
+locations[8]
+  name =  Tyre Junction bus stop
+  latitude = 6.969606
+  longitude = 79.913343
+
+
+6.967961, 79.909856
+6.967034, 79.907850
+
+
+locations[8]
+  name =  Bulugaha Junction bus stop
+  latitude = 6.967183
+  longitude = 79.906380
+
+
+6.967620, 79.905200
+6.967641, 79.905146
+6.967795, 79.902534
+
+
+locations[8]
+  name =  Thorana Junction bus stop
+  latitude = 6.967161
+  longitude = 79.900796
+
+
+6.966676, 79.899358
+6.966181, 79.898687
+
+
+locations[8]
+  name =  Pattiya Junction bus stop
+  latitude = 6.961884
+  longitude = 79.894235
+
+
+6.957880, 79.890158
+6.956101, 79.888286
+
+
+locations[8]
+  name =  4th Mile Post
+  latitude = 6.955627
+  longitude = 79.886714
+
+6.955718, 79.883919
+6.955729, 79.883522
+6.955591, 79.883066
+
+[6.952779, 79.880657]
+locations[8]
+  name =  New Kelani Bridge bus stop
+  latitude = 6.952779
+  longitude = 79.880657
+
+6.950612, 79.878710
+6.950383, 79.878115
+6.950910, 79.874285
+6.950691, 79.873969
+6.946335, 79.868953
+6.944658, 79.867027
+6.944030, 79.866002
+6.943519, 79.864672
+6.943354, 79.864484
+6.943162, 79.864420
+
+
+[6.942624, 79.864639]
+locations[8]
+  name =  Armours street bus stop
+  latitude = 6.942624
+  longitude = 79.864639
+
+
+6.939802, 79.865969
+6.938865, 79.866366
+6.936005, 79.866387
+6.934076, 79.866095
+6.933512, 79.865961
+6.932804, 79.865618
+6.932261, 79.865318
+6.931574, 79.865141
+6.930323, 79.865023
+6.929652, 79.864749
+6.929253, 79.864347
+6.929051, 79.864116
+6.929115, 79.863751
+
+
+[6.929679, 79.863102]
+locations[8]
+  name =  Maradana Railway bus stop
+  latitude = 6.929679
+  longitude = 79.863102
+
+
+6.932134, 79.860597
+6.932214, 79.860490
+6.931825, 79.859331
+6.932006, 79.857893
+6.933923, 79.855838
+6.934866, 79.853698
+
+[6.934893, 79.853247]
+locations[8]
+  name =  Pettah private bus stand stop
+  latitude = 6.934893
+  longitude = 79.853247
+
+
+6.934403, 79.851697
+
+[6.934041, 79.850233]
+locations[8]
+  name =  Pettah bus stop
+  latitude = 6.934041
+  longitude = 79.850233
+
+

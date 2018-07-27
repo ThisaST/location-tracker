@@ -1,6 +1,9 @@
 package com.uok.se.thisara.smart.trackerapplication.ui.driverui;
 
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,6 +25,7 @@ import com.uok.se.thisara.smart.trackerapplication.R;
 import com.uok.se.thisara.smart.trackerapplication.model.Bus;
 import com.uok.se.thisara.smart.trackerapplication.ui.riderui.RiderActivity;
 import com.uok.se.thisara.smart.trackerapplication.util.Configuration;
+import com.uok.se.thisara.smart.trackerapplication.viewmodel.BusListViewModel;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,6 +41,7 @@ public class BusIdentificationActivity extends AppCompatActivity {
     private List<Bus> busList;
     private Button addNewBusButton;
     private SpotsDialog waitingDialog;
+    private BusListViewModel busListViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +54,7 @@ public class BusIdentificationActivity extends AppCompatActivity {
 
         addNewBusButton = findViewById(R.id.addNewBusButton);
 
-        addNewBusButton.setOnClickListener(new View.OnClickListener() {
+        /*addNewBusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -57,6 +62,18 @@ public class BusIdentificationActivity extends AppCompatActivity {
                 startActivity(intent);
                 BusIdentificationActivity.this.overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 
+            }
+        });*/
+
+        FloatingActionButton floatingActionButton = findViewById(R.id.addNewBusFloatingButton);
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(BusIdentificationActivity.this, AddNewBusActivity.class);
+                startActivity(intent);
+                BusIdentificationActivity.this.overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
             }
         });
 
@@ -76,6 +93,8 @@ public class BusIdentificationActivity extends AppCompatActivity {
         waitingDialog.show();
 
         initializeData();
+        /*busListViewModel = ViewModelProviders.of(this).get(BusListViewModel.class);
+        addDataToList(busListViewModel.getBusList());*/
 
         Window window = this.getWindow();
 
@@ -111,6 +130,10 @@ public class BusIdentificationActivity extends AppCompatActivity {
             }
         });
 
+
+        //addDataToList(busListViewModel.getBusList());
+
+
     }
 
     private void setBusList(DataSnapshot dataSnapshot) {
@@ -118,7 +141,6 @@ public class BusIdentificationActivity extends AppCompatActivity {
         HashMap<String, Object> busValues = (HashMap<String, Object>) dataSnapshot.getValue();
 
         Bus newBus = new Bus();
-        //Bus newBus = new Bus(busValues.get("registrationNo").toString(), busValues.get("ownerName").toString(), Integer.parseInt(busValues.get("imageId").toString()), busValues.get("busModel").toString());
         newBus.setBusModel(busValues.get("busModel").toString());
         newBus.setRegistrationNo(busValues.get("registrationNo").toString());
         newBus.setOwnerName(busValues.get("ownerName").toString());
@@ -136,5 +158,11 @@ public class BusIdentificationActivity extends AppCompatActivity {
 
     }
 
+    /*public void addDataToList(LiveData<List<Bus>> busList) {
+
+        this.busList = busList.getValue();
+
+        initializeAdapter();
+    }*/
 
 }

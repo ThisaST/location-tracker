@@ -46,7 +46,7 @@
         </activity>
 
         <service
-            android:name=".ui.TrackerService"
+            android:name=".service.TrackerService"
             android:enabled="true"
             android:exported="true" />
 
@@ -124,7 +124,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".ui.riderui.AvailableBussesActivity" />
+        <activity android:name=".ui.RouteMapActivity"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
     </application>
 
 </manifest>

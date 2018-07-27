@@ -106,6 +106,9 @@ public class MainActivity extends AppCompatActivity
                     Snackbar.make(mapFragment.getView(), "You are Online", Snackbar.LENGTH_SHORT).show();
                     startActivity(intent);
 
+                    Intent newIntent = new Intent(MainActivity.this, DriverLocationActivity.class);
+                    startActivity(newIntent);
+
                 }else {
 
                     /*googleMapConfig.stopLocationUpdates();*/

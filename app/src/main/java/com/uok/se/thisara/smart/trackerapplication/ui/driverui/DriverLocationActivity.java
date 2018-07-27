@@ -366,7 +366,7 @@ public class DriverLocationActivity extends FragmentActivity implements OnMapRea
 
                                 busMarker = mMap.addMarker(new MarkerOptions().position(currentPosition)
                                         .flat(true)
-                                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.bus_icon)));
+                                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_location_current_new)));
 
                                 handler = new Handler();
                                 index = -1;
@@ -545,9 +545,11 @@ public class DriverLocationActivity extends FragmentActivity implements OnMapRea
                             mCurrent.remove();
                         }
 
-                        mCurrent = mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.bus_icon))
+                        mCurrent = mMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_location_current_new))
                                 .position(new LatLng(latitude, longitude))
-                                .title("Your Location"));
+                                .title("Your Location/n" +
+                                        "current speed - 25kmph" +
+                                        "Average speed - 40kmph"));
 
                         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 15.0f));
 

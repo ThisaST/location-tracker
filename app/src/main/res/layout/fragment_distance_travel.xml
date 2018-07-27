@@ -6,27 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".ui.driverui.DistanceTravelFragment">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:tooltipText="Add New Bus"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Travel Distance"
+        app:titleTextColor="@color/white">
+
+
+    </android.support.v7.widget.Toolbar>
+
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <TextView
-            android:layout_width="390dp"
-            android:layout_height="42dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@android:color/holo_blue_dark"
-            android:text="Travel Distance"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="22sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.017" />
 
         <com.github.mikephil.charting.charts.BarChart
             android:id="@+id/barchart"
@@ -53,7 +50,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:background="@android:color/black"
+            android:background="@android:color/white"
             android:orientation="horizontal"
             android:padding="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -68,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="25dp"
-                android:background="#1a1a1a"
+                android:background="#fff9f9"
                 android:orientation="vertical">
 
 
@@ -77,7 +74,7 @@
                     android:layout_height="wrap_content"
                     android:text="Travel Distance"
                     android:textAlignment="center"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="18sp" />
 
                 <TextView
@@ -86,14 +83,14 @@
                     android:layout_margin="20dp"
                     android:text="253.2KM"
                     android:textAlignment="center"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="27sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:background="#1a1a1a"
+                android:background="#fff9f9"
                 android:orientation="vertical">
 
                 <TextView
@@ -101,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:text="Trips"
                     android:textAlignment="center"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="18sp" />
 
                 <TextView

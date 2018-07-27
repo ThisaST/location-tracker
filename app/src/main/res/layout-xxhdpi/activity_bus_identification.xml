@@ -14,24 +14,17 @@
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         android:tooltipText="Add New Bus"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Select available Bus"
+        app:titleTextColor="@color/white">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select available Bus"
-            android:textColor="@color/basePressColor"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="13dp" />
 
     </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/availableBusList"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="508dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="8dp"
@@ -43,7 +36,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612">
+        app:layout_constraintVertical_bias="0.503">
 
     </android.support.v7.widget.RecyclerView>
 
@@ -71,14 +64,15 @@
         app:layout_constraintVertical_bias="0.877" />-->
 
     <android.support.design.widget.FloatingActionButton
-        android:layout_width="56dp"
-        android:layout_height="57dp"
+        android:id="@+id/addNewBusFloatingButton"
+        android:layout_width="71dp"
+        android:layout_height="67dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/colorPrimary"
         android:src="@drawable/ic_add_only_white"
+        app:backgroundTint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.976"

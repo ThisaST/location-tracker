@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.riderui.LocationSelectorActivity">
 
-    <android.support.v7.widget.Toolbar
+    <!--<android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="53dp"
@@ -24,11 +24,11 @@
             android:textSize="20sp"
             android:textStyle="bold"/>
 
-    </android.support.v7.widget.Toolbar>
+    </android.support.v7.widget.Toolbar>-->
 
 
 
-    <LinearLayout
+    <!--<LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="103dp"
@@ -67,6 +67,86 @@
             android:hint="Destination"
             android:inputType="textPersonName"
             android:textColorHint="@android:color/black" />
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:id="@+id/search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/activity_margin_10"
+                android:layout_marginRight="@dimen/activity_margin_10"
+                android:layout_marginTop="@dimen/activity_margin_10"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/search_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="-364dp"
+                        android:layout_toLeftOf="@+id/clear"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/ic_search"
+                        android:drawablePadding="10dp"
+                        android:hint="Search"
+                        android:imeOptions="actionSearch"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:singleLine="true" />
+                    <ImageView
+                        android:id="@+id/clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_search"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right|center_vertical"
+                        android:padding="@dimen/activity_margin_10"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/powered_by_google"
+                android:layout_below="@+id/search_layout"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="-8dp"
+                android:background="@color/white" />
+
+            <ImageView
+                android:id="@+id/powered_by_google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:padding="@dimen/activity_margin_10"
+                android:layout_marginBottom="@dimen/activity_margin_10"
+                android:src="@drawable/powered_by_google_light"/>
+        </RelativeLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
