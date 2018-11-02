@@ -10,7 +10,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class FirebaseReferenceConfig {
 
-    private DataSnapshot dataSnapshot;
+    private DataSnapshot dataSnapshotN;
 
     public static DatabaseReference getFirebaseReference() {
 
@@ -22,13 +22,14 @@ public class FirebaseReferenceConfig {
         return FirebaseAuth.getInstance().getCurrentUser();
     }
 
-    public void getFirebaseData(String dbReferencePath) {
+    public DataSnapshot getFirebaseData(String dbReferencePath) {
 
-
-        FirebaseReferenceConfig.getFirebaseReference().child(dbReferencePath).addValueEventListener(new ValueEventListener() {
+        DatabaseReference firebaseDatabaseReference = FirebaseDatabase.getInstance().getReference(dbReferencePath);
+        firebaseDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
+                dataSnapshotN = dataSnapshot;
                 setDataSnapshotValue(dataSnapshot);
             }
 
@@ -38,16 +39,17 @@ public class FirebaseReferenceConfig {
             }
         });
 
+        return dataSnapshotN;
     }
 
     public void setDataSnapshotValue(DataSnapshot dataSnapshot) {
 
-        this.dataSnapshot = dataSnapshot;
+        this.dataSnapshotN = dataSnapshot;
     }
 
     public DataSnapshot getDataSnapshot() {
 
-        return this.dataSnapshot;
+        return this.dataSnapshotN;
     }
 
 

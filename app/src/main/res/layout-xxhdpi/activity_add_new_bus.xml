@@ -36,10 +36,10 @@
         android:layout_marginBottom="448dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintHorizontal_bias="0.786"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.503" />
+        app:layout_constraintVertical_bias="0.558" />
 
     <TextView
         android:id="@+id/textView"
@@ -54,30 +54,30 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.502" />
+        app:layout_constraintVertical_bias="0.56" />
 
 
     <Button
         android:id="@+id/addNewBusButton"
-        android:layout_width="332dp"
-        android:layout_height="wrap_content"
+        android:layout_width="462dp"
+        android:layout_height="55dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+
         android:background="@drawable/round_button"
         android:text="ADD"
         android:textColor="@color/basePressColor"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/my_toolbar"
-        app:layout_constraintVertical_bias="0.984" />
+        app:layout_constraintVertical_bias="1.0" />
 
 
     <ImageButton
@@ -112,14 +112,14 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533" />
+        app:layout_constraintVertical_bias="0.531" />
 
     <EditText
         android:id="@+id/vehicleRegisterNo"
-        android:layout_width="362dp"
+        android:layout_width="286dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -137,7 +137,7 @@
 
     <EditText
         android:id="@+id/ownerName"
-        android:layout_width="362dp"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -155,7 +155,7 @@
 
     <EditText
         android:id="@+id/contactNo"
-        android:layout_width="362dp"
+        android:layout_width="292dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -170,6 +170,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.438" />
+
+    <ProgressBar
+        android:id="@+id/imageUploadProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="383dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/addNewBusButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/my_toolbar"
+        app:layout_constraintVertical_bias="0.902" />
 
 
 </android.support.constraint.ConstraintLayout>

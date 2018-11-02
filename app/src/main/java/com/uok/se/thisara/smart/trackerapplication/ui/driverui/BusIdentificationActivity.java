@@ -102,7 +102,6 @@ public class BusIdentificationActivity extends AppCompatActivity {
 
     }
 
-
     private void initializeAdapter() {
 
         mRecyclerView = findViewById(R.id.availableBusList);
@@ -116,11 +115,10 @@ public class BusIdentificationActivity extends AppCompatActivity {
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
         Log.d("firebase db reference", FirebaseAuth.getInstance().getCurrentUser().getUid());
-        String path = "bus/"  + FirebaseAuth.getInstance().getCurrentUser().getUid();
+        String path = "bus/"  + FirebaseAuth.getInstance().getCurrentUser().getUid() + "/";
         reference.child(path).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
                 setBusList(dataSnapshot);
             }
 
@@ -138,19 +136,21 @@ public class BusIdentificationActivity extends AppCompatActivity {
 
     private void setBusList(DataSnapshot dataSnapshot) {
 
-        HashMap<String, Object> busValues = (HashMap<String, Object>) dataSnapshot.getValue();
+        //HashMap<String, Object> busValues = (HashMap<String, Object>) dataSnapshot.getValue();
 
-        Bus newBus = new Bus();
+        busList = new ArrayList<>();
+        for (DataSnapshot data : dataSnapshot.getChildren()) {
+
+            Bus addedBusses = data.getValue(Bus.class);
+            busList.add(addedBusses);
+        }
+        /*Bus newBus = new Bus();
         newBus.setBusModel(busValues.get("busModel").toString());
         newBus.setRegistrationNo(busValues.get("registrationNo").toString());
         newBus.setOwnerName(busValues.get("ownerName").toString());
-        newBus.setImageId(Integer.parseInt(busValues.get("imageId").toString()));
+        newBus.setImageId(Integer.parseInt(busValues.get("imageId").toString()));*/
 
-
-
-        busList = new ArrayList<>();
-        busList.add(newBus);
-        busList.add(new Bus("wpXA-1234", "Nilupul Shenal", 2, "LEYLAND"));
+        //busList.add(new Bus("wpXA-1234", "Nilupul Shenal", 2, "LEYLAND"));
         int size= busList.size();
         System.out.println(size);
 
@@ -164,5 +164,10 @@ public class BusIdentificationActivity extends AppCompatActivity {
 
         initializeAdapter();
     }*/
+
+    public void generateId() {
+
+
+    }
 
 }

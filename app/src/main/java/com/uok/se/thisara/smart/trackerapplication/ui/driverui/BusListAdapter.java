@@ -86,7 +86,6 @@ public class BusListAdapter extends RecyclerView.Adapter<BusListAdapter.BusViewH
 
         Picasso.get()
                 .load(R.drawable.bus_test)
-                .transform(new CropCircleTransformation())
                 .fit()
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
                 .into(holder.busImage);

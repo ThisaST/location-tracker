@@ -16,8 +16,8 @@
 
         <ImageView
             android:id="@+id/busImage"
-            android:layout_width="66dp"
-            android:layout_height="55dp"
+            android:layout_width="73dp"
+            android:layout_height="71dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -25,10 +25,9 @@
             android:src="@mipmap/ic_launcher"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.027"
+            card_view:layout_constraintHorizontal_bias="0.01"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintVertical_bias="0.727" />
+            card_view:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:layout_width="233dp"
@@ -94,7 +93,7 @@
 
         </LinearLayout>-->
         <View
-            android:layout_width="238dp"
+            android:layout_width="350dp"
             android:layout_height="1dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -103,10 +102,9 @@
             android:background="@color/colorPrimary"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.918"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
-            card_view:layout_constraintVertical_bias="1.0" />
+            card_view:layout_constraintVertical_bias="0.977" />
     </android.support.constraint.ConstraintLayout>
 
 

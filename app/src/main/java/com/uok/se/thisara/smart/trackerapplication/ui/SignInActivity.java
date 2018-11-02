@@ -67,20 +67,6 @@ public class  SignInActivity extends AppCompatActivity {
             }
         });
 
-
-        /**
-         * Use of view model to get the data from the firebase and use in the SignInActivity
-         * */
-
-        /*sIgnInActivityViewModel = ViewModelProviders.of(this).get(SignInActivityViewModel.class);
-        sIgnInActivityViewModel.getFirebaseUserDetails().observe(this, new Observer<FirebaseAuth>() {
-            @Override
-            public void onChanged(@Nullable FirebaseAuth firebaseAuth) {
-
-
-            }
-        });*/
-
         Window window = this.getWindow();
 
         Configuration.changeStatusBarColor(window, this, R.color.colorPrimaryDark);
@@ -122,17 +108,8 @@ public class  SignInActivity extends AppCompatActivity {
     private void updateUI(FirebaseUser currentUser) {
 
         Toast.makeText(SignInActivity.this, "Success" + currentUser.getDisplayName(), Toast.LENGTH_SHORT).show();
-
-        if (userType.equals("Driver")) {
-            Intent mainViewIntent = new Intent(SignInActivity.this, MainActivity.class);
-            startActivity(mainViewIntent);
-        } else if (userType.equals("Rider")) {
-
-            Intent mainViewIntent = new Intent(SignInActivity.this, RiderActivity.class);
-            startActivity(mainViewIntent);
-        }
-
-
+        Intent mainViewIntent = new Intent(SignInActivity.this, MainActivity.class);
+        startActivity(mainViewIntent);
     }
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
