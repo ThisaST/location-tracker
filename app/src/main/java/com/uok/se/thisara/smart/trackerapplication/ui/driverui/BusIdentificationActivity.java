@@ -144,15 +144,6 @@ public class BusIdentificationActivity extends AppCompatActivity {
             Bus addedBusses = data.getValue(Bus.class);
             busList.add(addedBusses);
         }
-        /*Bus newBus = new Bus();
-        newBus.setBusModel(busValues.get("busModel").toString());
-        newBus.setRegistrationNo(busValues.get("registrationNo").toString());
-        newBus.setOwnerName(busValues.get("ownerName").toString());
-        newBus.setImageId(Integer.parseInt(busValues.get("imageId").toString()));*/
-
-        //busList.add(new Bus("wpXA-1234", "Nilupul Shenal", 2, "LEYLAND"));
-        int size= busList.size();
-        System.out.println(size);
 
         initializeAdapter();
 
@@ -164,10 +155,5 @@ public class BusIdentificationActivity extends AppCompatActivity {
 
         initializeAdapter();
     }*/
-
-    public void generateId() {
-
-
-    }
 
 }

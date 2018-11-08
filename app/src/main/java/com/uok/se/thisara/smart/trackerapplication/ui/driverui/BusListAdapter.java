@@ -3,6 +3,7 @@ package com.uok.se.thisara.smart.trackerapplication.ui.driverui;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -85,7 +86,7 @@ public class BusListAdapter extends RecyclerView.Adapter<BusListAdapter.BusViewH
         holder.ownerName.setText(busList.get(position).getOwnerName());
 
         Picasso.get()
-                .load(R.drawable.bus_test)
+                .load(Uri.parse(busList.get(position).getImageId()))
                 .fit()
                 .placeholder(R.drawable.common_google_signin_btn_icon_dark)
                 .into(holder.busImage);

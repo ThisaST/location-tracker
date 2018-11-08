@@ -35,13 +35,13 @@ public class BusListRepository {
         newBus.setBusModel(busValues.get("busModel").toString());
         newBus.setRegistrationNo(busValues.get("registrationNo").toString());
         newBus.setOwnerName(busValues.get("ownerName").toString());
-        newBus.setImageId(Integer.parseInt(busValues.get("imageId").toString()));
+        //newBus.setImageId(Integer.parseInt(busValues.get("imageId").toString()));
 
 
 
         busList = new ArrayList<>();
         busList.add(newBus);
-        busList.add(new Bus("wpXA-1234", "Nilupul Shenal", 2, "LEYLAND"));
+        busList.add(new Bus("wpXA-1234", "Nilupul Shenal", "", "LEYLAND"));
         int size= busList.size();
         Log.d("Bus List Size", Integer.toString(size));
 

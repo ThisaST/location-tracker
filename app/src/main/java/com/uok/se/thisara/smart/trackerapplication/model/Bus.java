@@ -3,6 +3,7 @@ package com.uok.se.thisara.smart.trackerapplication.model;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
+import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -15,14 +16,14 @@ public class Bus implements Serializable {
     private int busId;
     private String registrationNo;
     private String ownerName;
-    private Integer imageId;
+    private String imageId;
     private String busModel;
 
     @Ignore
     public Bus() {
     }
 
-    public Bus(String registrationNo, String ownerName, Integer imageId, String busModel) {
+    public Bus(String registrationNo, String ownerName, String imageId, String busModel) {
         this.registrationNo = registrationNo;
         this.ownerName = ownerName;
         this.imageId = imageId;
@@ -53,11 +54,11 @@ public class Bus implements Serializable {
         this.ownerName = ownerName;
     }
 
-    public Integer getImageId() {
+    public String getImageId() {
         return imageId;
     }
 
-    public void setImageId(Integer imageId) {
+    public void setImageId(String imageId) {
         this.imageId = imageId;
     }
 

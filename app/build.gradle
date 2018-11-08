@@ -18,9 +18,9 @@ android {
     }
 }
 
-ext {
-    googleplayservicesVersion = "11.8.0"
-}
+    ext {
+        googleplayservicesVersion = "11.8.0"
+    }
 
 dependencies {
 

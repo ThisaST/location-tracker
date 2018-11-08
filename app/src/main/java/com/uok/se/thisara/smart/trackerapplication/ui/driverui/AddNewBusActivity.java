@@ -74,6 +74,7 @@ public class AddNewBusActivity extends AppCompatActivity {
     private ProgressBar mProgressBar;
     private List<Bus> busList;
     private DataSnapshot availableBusses;
+    private Uri imageUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,7 +158,7 @@ public class AddNewBusActivity extends AppCompatActivity {
         DatabaseReference dbReference = mDatabase.getReference(dbPath);
 
 
-        Bus newBus = new Bus(vehicleNumber.getText().toString(), ownerName.getText().toString(), newBusID, vehicleModel.getSelectedItem().toString());
+        Bus newBus = new Bus(vehicleNumber.getText().toString(), ownerName.getText().toString(), imageUri.toString(), vehicleModel.getSelectedItem().toString());
         dbReference.setValue(newBus);
     }
 
@@ -311,6 +312,7 @@ public class AddNewBusActivity extends AppCompatActivity {
                             Toast.makeText(AddNewBusActivity.this, "Upload successful", Toast.LENGTH_LONG).show();
                             Upload upload = new Upload(vehicleNumber.getText().toString().trim(),
                                     taskSnapshot.getDownloadUrl().toString());
+                            imageUri = taskSnapshot.getDownloadUrl();
                             String uploadId = mDatabase.getReference().push().getKey();
                             mDatabase.getReference().child(uploadId).setValue(upload);
                         }
