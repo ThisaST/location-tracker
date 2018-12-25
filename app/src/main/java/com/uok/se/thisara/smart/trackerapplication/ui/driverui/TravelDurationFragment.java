@@ -104,25 +104,44 @@ public class TravelDurationFragment extends Fragment {
             yVals2.add(new BarEntry(i, 0.7f));
         }
 
+        List<BarEntry> entries = new ArrayList<>();
+        entries.add(new BarEntry(0f, 30f));
+        entries.add(new BarEntry(1f, 45f));
+        entries.add(new BarEntry(2f, 62f));
+        entries.add(new BarEntry(3f, 43f));
+        // gap of 2f
+        entries.add(new BarEntry(5f, 22f));
+        entries.add(new BarEntry(6f, 60f));
+
+        List<BarEntry> yVList = new ArrayList<>();
+        entries.add(new BarEntry(0f, 30f));
+        entries.add(new BarEntry(1f, 45f));
+        entries.add(new BarEntry(2f, 62f));
+        entries.add(new BarEntry(3f, 43f));
+        // gap of 2f
+        entries.add(new BarEntry(5f, 22f));
+        entries.add(new BarEntry(6f, 60f));
+
+        BarDataSet set = new BarDataSet(entries, "Distance");
 
         BarDataSet set1, set2;
 
         if (barChart.getData() != null && barChart.getData().getDataSetCount() > 0) {
-            set1 = (BarDataSet)barChart.getData().getDataSetByIndex(0);
+            //set = (BarDataSet)barChart.getData().getDataSetByIndex(0);
             set2 = (BarDataSet)barChart.getData().getDataSetByIndex(1);
-            set1.setValues(yVals1);
-            set2.setValues(yVals2);
+            set.setValues(entries);
+            set2.setValues(yVList);
             barChart.getData().notifyDataChanged();
             barChart.notifyDataSetChanged();
         } else {
             // create 2 datasets with different types
-            set1 = new BarDataSet(yVals1, "Up");
-            set1.setColor(Color.rgb(104, 241, 175));
-            set2 = new BarDataSet(yVals2, "Down");
+            set = new BarDataSet(entries, "Up");
+            set.setColor(Color.rgb(104, 241, 175));
+            set2 = new BarDataSet(yVList, "Down");
             set2.setColor(Color.rgb(164, 228, 251));
 
             ArrayList<IBarDataSet> dataSets = new ArrayList();
-            dataSets.add(set1);
+            dataSets.add(set);
             dataSets.add(set2);
 
             BarData data = new BarData(dataSets);

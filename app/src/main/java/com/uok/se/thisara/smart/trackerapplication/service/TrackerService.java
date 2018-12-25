@@ -37,13 +37,26 @@ public class TrackerService extends Service {
 
     private static final String TAG = TrackerService.class.getSimpleName();
     private LocationClient mLocationClient;
+    private String busId;
+    private String routeId;
+    private String direction;
 
     private FirebaseUser firebaseAuthBusDriver;
 
     //private BusLocation busLocation = null;
 
     @Override
-    public IBinder onBind(Intent intent) {return null;}
+    public IBinder onBind(Intent intent) {
+        return null;
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        busId = intent.getStringExtra("bus");
+        routeId = intent.getStringExtra("route");
+        direction = intent.getStringExtra("direction");
+        return START_STICKY;
+    }
 
     @Override
     public void onCreate() {
@@ -51,7 +64,6 @@ public class TrackerService extends Service {
 
         //get the firebase user as login
         firebaseAuthBusDriver = FirebaseAuth.getInstance().getCurrentUser();
-
         buildNotification();
         requestLocationUpdates();
     }
@@ -100,7 +112,7 @@ public class TrackerService extends Service {
             client.requestLocationUpdates(request, new LocationCallback() {
                 @Override
                 public void onLocationResult(LocationResult locationResult) {
-                    final String path = getString(R.string.firebase_path) + "/" + getString(R.string.bus_id);
+                    final String path = "locations/route/" + routeId + "/" + busId;
                     DatabaseReference ref = FirebaseDatabase.getInstance().getReference(path);
                     Location location = locationResult.getLastLocation();
                     if (location != null && location.getAccuracy() != 0){
@@ -144,7 +156,5 @@ public class TrackerService extends Service {
                 }
             }, null);
         }
-
-
     }
 }

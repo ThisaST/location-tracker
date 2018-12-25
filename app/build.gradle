@@ -91,8 +91,6 @@ dependencies {
     annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
 
     //android Room for SQLite
-
-
     implementation "android.arch.persistence.room:runtime:$room_version"
     annotationProcessor "android.arch.persistence.room:compiler:$room_version"
 

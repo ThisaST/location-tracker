@@ -27,7 +27,7 @@ public class BusListRepository {
 
         FirebaseReferenceConfig firebaseReferenceConfig = new FirebaseReferenceConfig();
         firebaseReferenceConfig.getFirebaseData(dbPath);
-        DataSnapshot dataSnapshot = firebaseReferenceConfig.getDataSnapshot();
+        DataSnapshot dataSnapshot = firebaseReferenceConfig.getDataSnapshot(dbPath);
 
         HashMap<String, Object> busValues = (HashMap<String, Object>) dataSnapshot.getValue();
         List<Bus> busList;

@@ -47,8 +47,9 @@ public class FirebaseReferenceConfig {
         this.dataSnapshotN = dataSnapshot;
     }
 
-    public DataSnapshot getDataSnapshot() {
+    public DataSnapshot getDataSnapshot(String path) {
 
+        new FirebaseReferenceConfig().getFirebaseData(path);
         return this.dataSnapshotN;
     }
 

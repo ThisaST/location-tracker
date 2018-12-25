@@ -127,11 +127,6 @@ public class BusIdentificationActivity extends AppCompatActivity {
 
             }
         });
-
-
-        //addDataToList(busListViewModel.getBusList());
-
-
     }
 
     private void setBusList(DataSnapshot dataSnapshot) {
@@ -147,6 +142,14 @@ public class BusIdentificationActivity extends AppCompatActivity {
 
         initializeAdapter();
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     /*public void addDataToList(LiveData<List<Bus>> busList) {

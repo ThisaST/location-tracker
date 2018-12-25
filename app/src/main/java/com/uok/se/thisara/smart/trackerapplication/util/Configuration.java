@@ -17,7 +17,7 @@ import com.uok.se.thisara.smart.trackerapplication.remote.RetrofitClient;
 
 public class Configuration {
 
-    public static final String baseUrl = "http://192.168.8.100:8080";
+    public static final String baseUrl = "http://35.185.104.57:9090";
     public static final String baseURL = "https://maps.googleapis.com";
 
 

@@ -80,7 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
-                    android:text="2h 13m 22s"
+                    android:text="14h 13m"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimary"
                     android:textSize="20sp" />
@@ -104,7 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="18dp"
-                    android:text="4"
+                    android:text="17"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimary"
                     android:textSize="30sp" />

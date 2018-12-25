@@ -93,6 +93,7 @@ public class AddNewBusActivity extends AppCompatActivity {
         //add values to the spinner
         addDataToSpinner(vehicleModel);
 
+        addNewBusButton.setEnabled(false);
         //image button implementation to get the image from the Gallery or from the camera
         vehicleImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -328,6 +329,7 @@ public class AddNewBusActivity extends AppCompatActivity {
                         public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
                             double progress = (100.0 * taskSnapshot.getBytesTransferred() / taskSnapshot.getTotalByteCount());
                             mProgressBar.setProgress((int) progress);
+                            addNewBusButton.setEnabled(true);
                         }
                     });
         } else {

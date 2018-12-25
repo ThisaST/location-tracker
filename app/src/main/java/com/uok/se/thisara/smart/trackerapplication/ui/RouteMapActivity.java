@@ -166,7 +166,7 @@ public class RouteMapActivity extends AppCompatActivity implements
         }
 
         Polyline busRoute = googleMap.addPolyline(options);
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(7.0014245, 79.9498839), 4));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(7.0014245, 79.9498839), 12));
 
 
 

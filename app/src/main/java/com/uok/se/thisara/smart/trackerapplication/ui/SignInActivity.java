@@ -1,6 +1,7 @@
 package com.uok.se.thisara.smart.trackerapplication.ui;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.uok.se.thisara.smart.trackerapplication.R;
+import com.uok.se.thisara.smart.trackerapplication.ui.driverui.BusIdentificationActivity;
 import com.uok.se.thisara.smart.trackerapplication.ui.driverui.MainActivity;
 import com.uok.se.thisara.smart.trackerapplication.ui.riderui.RiderActivity;
 import com.uok.se.thisara.smart.trackerapplication.util.Configuration;
@@ -36,14 +38,17 @@ public class  SignInActivity extends AppCompatActivity {
     private final int RC_SIGN_IN = 1;
     private FirebaseAuth mAuth;
     private String userType;
+    SharedPreferences prefs = null;
+    public boolean isInstallation;
 
     private SignInActivityViewModel sIgnInActivityViewModel;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+
+        prefs = getSharedPreferences("com.mycompany.myAppName", MODE_PRIVATE);
 
         mGoogleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.web_client_id))
@@ -108,8 +113,14 @@ public class  SignInActivity extends AppCompatActivity {
     private void updateUI(FirebaseUser currentUser) {
 
         Toast.makeText(SignInActivity.this, "Success" + currentUser.getDisplayName(), Toast.LENGTH_SHORT).show();
-        Intent mainViewIntent = new Intent(SignInActivity.this, MainActivity.class);
-        startActivity(mainViewIntent);
+
+        if (isInstallation) {
+            Intent mainViewIntent = new Intent(SignInActivity.this, BusIdentificationActivity.class);
+            startActivity(mainViewIntent);
+        }else {
+            Intent mainViewIntent = new Intent(SignInActivity.this, MainActivity.class);
+            startActivity(mainViewIntent);
+        }
     }
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
@@ -132,5 +143,16 @@ public class  SignInActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (prefs.getBoolean("firstrun", true)) {
+
+            isInstallation = true;
+            prefs.edit().putBoolean("firstrun", false).commit();
+        }
     }
 }
